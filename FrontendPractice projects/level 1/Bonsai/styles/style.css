@@ -1,0 +1,67 @@
+:root {
+  --color-green: #00b289;
+  --color-dark: #4c4d5f;
+  --color-white: #fff;
+  --color-yellow: #f8db62;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(250, 250, 250);
+  position: relative;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+  .header {
+    flex-wrap: wrap;
+    font-size: clamp(0.4rem, 80%, 70px);
+  }
+  .right-section button {
+    display: none;
+  }
+  .dropdown-menu { 
+    width: 100%;
+  }
+
+  .plans-header {
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .available-plans-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}

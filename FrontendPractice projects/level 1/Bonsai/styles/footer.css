@@ -1,0 +1,27 @@
+.footer {
+  margin-top: 4rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  font-family: Poppins;
+}
+
+.footer .list-title {
+  margin-bottom: 1.5rem;
+}
+
+.footer ul {
+  margin: 1rem 0;
+}
+
+.footer ul li {
+  display: flex;
+  align-items: center;
+}
+
+.footer ul li span {
+  margin-top: 0.1rem;
+}
