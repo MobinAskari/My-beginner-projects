@@ -83,3 +83,16 @@ ul {
     font-size: 1.75rem;
   }
 }
+
+@media screen and (max-width: 350px) { 
+  .feature-element {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .feature-info a {
+    justify-content: center;
+  }
+}
