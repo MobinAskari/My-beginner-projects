@@ -1,0 +1,91 @@
+.main-container {
+  width: 100%;
+  padding-top: 4rem;
+}
+
+.main-hero {
+  height: 15rem;
+  background-color: var(--color-lightpurple);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.main-hero p {
+  font-size: 2.5rem;
+}
+
+
+.hero-search-section {
+  width: 50%;
+  height: 2.25rem;
+  display: flex;
+  align-items: center;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  border: 1px solid var(--color-black);
+  background-color: var(--color-white);
+}
+
+.hero-search-section input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding: 0.1rem 0 0 0.5rem;
+  background-color: transparent;
+  font-family: Poppins;
+}
+
+.hero-search-section span {
+  font-size: 1.25rem;
+  margin-top: 0.2rem;
+}
+
+.service-features {
+  width: 100%;
+  padding-top: 7.5rem;
+  display: grid;
+  grid-template-columns: 1fr; 
+  justify-items: center;
+  grid-gap: 3.5rem;
+  font-family: Poppins;
+}
+
+.feature-element-container {
+  display: flex;
+  gap: 3rem;
+  padding: 0 2rem;
+}
+
+.feature-element {
+  width: 25rem;
+  display: flex;  
+  gap: 1rem;
+  font-size: 0.9rem;
+}
+
+.feature-element img {
+  width: 5rem;
+  object-fit: cover;
+}
+
+.feature-element .feature-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.feature-element .feature-info a { 
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: var(--color-purple);
+  font-size: 0.8rem;
+}
+
+.feature-element .feature-info a span { 
+  font-size: 1rem;
+} 
