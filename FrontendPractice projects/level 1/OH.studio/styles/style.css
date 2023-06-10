@@ -21,6 +21,9 @@ body {
   height: 100vh;
   font-family: Poppins;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 button {
@@ -43,7 +46,9 @@ a {
   text-decoration: none;
 }
 
-
+.no-target {
+  opacity: 1;
+}
 
 @media screen and (max-width: 1000px) {
   .main-container .experience-container-img {

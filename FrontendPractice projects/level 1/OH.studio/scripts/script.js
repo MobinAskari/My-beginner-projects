@@ -26,7 +26,6 @@ const spacing = document.querySelector('.spacing');
 
 function showPage(page) {
   mainContainer.innerHTML = '';
-  spacing.classList.toggle('spacingInit')
 
   if (page === 'Home') {
     mainContainer.innerHTML += `
@@ -232,7 +231,7 @@ function showPage(page) {
 
   if (page === 'Contact') {
     mainContainer.innerHTML = `
-    <section class="offer-container" style="margin-top: 14%;">
+    <section class="offer-container no-target" style="margin-top: 14%;">
       <p>Let's work together.</p>
       <a href="#">Get in touch</a>  
     </section>

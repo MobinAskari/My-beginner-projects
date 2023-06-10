@@ -6,12 +6,6 @@
   align-items: center;
   gap: 2rem;
 }
-.spacing {
-  height: 1%;
-}
-.spacingInit {
-  height: 30%;
-}
 
 .main-container .top-section {
   width: 30rem;
