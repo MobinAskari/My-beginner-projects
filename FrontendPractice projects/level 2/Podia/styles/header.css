@@ -1,0 +1,42 @@
+.header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--color-white);
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.header-left-section,
+.header-left-section ul,
+.header-left-section li {
+  display: flex;
+  align-items: center;
+}
+
+.header-left-section, .header-left-section ul {
+  gap: 1rem;
+  font-size: 0.9rem;
+}
+
+.header-left-section li span {
+  font-size: 1.1rem;
+  margin-top: 0.1rem;
+  margin-left: 0.1rem;
+}
+
+.header-left-section svg {
+  width: 3.5rem;
+  margin-right: 0.5rem;
+  color: var(--color-purple);
+}
+
+.header-start-button {
+  background-color: var(--color-semiWhite);
+  padding: 0.25rem 0.5rem;
+  border-radius: 2rem;
+}

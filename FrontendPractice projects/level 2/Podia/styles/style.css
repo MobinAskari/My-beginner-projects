@@ -1,0 +1,159 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
+
+:root {
+  --color-white: #ffffff;
+  --color-semiWhite: #fdfbf9;
+  --color-purple: #4b2aad;
+  --color-orange: #a86501;
+  --color-blue: #027ca1;
+  --color-semiBlack: #1a1715;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Poppins;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-family: Poppins;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.clr-blue-opacity {
+  color: #027ca18d;
+  opacity: 0.5;
+}
+
+.clr-purple-opacity {
+  color: #4b2aad84;
+  opacity: 0.5;
+}
+
+.clr-orange-opacity {
+  color: #a865017d;
+  opacity: 0.5;
+}
+
+
+.clr-blue {
+  color: var(--color-blue);
+}
+
+.clr-purple {
+  color: var(--color-purple);
+}
+
+.clr-orange {
+  color: var(--color-orange);
+}
+
+
+.bgc-clr-blue {
+  color: var(--color-blue);
+  background-color: #027ca136;
+}
+
+.bgc-clr-purple {
+  color: var(--color-purple);
+  background-color: #4b2aad2d;
+}
+
+.bgc-clr-orange {
+  color: var(--color-orange);
+  background-color: #a8650134;
+}
+
+@media screen and (max-width: 700px) {
+  .header-container {
+    flex-direction: column;
+  }
+
+  .header-left-section, .header-left-section ul {
+    gap: 0.5rem;
+    font-size: 0.8rem;
+  }
+  
+  .header-left-section li span {
+    font-size: 0.9rem;
+  }
+
+  .header-right-section button {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+  }
+
+  .plans-con-top-section {
+    align-items: center;
+    row-gap: 1rem;
+    flex-direction: column;
+  }
+
+  h4 {
+    text-align: center;
+    background-color: var(--color-semiBlack);
+    color: var(--color-semiWhite);
+  }
+
+  .plans-stats tr {
+    flex-direction: column;
+    font-size: 0.5rem;
+  }
+
+  .plans-stats th {
+    margin: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 450px) { 
+
+  .header-left-section {
+    flex-direction: column;
+  }
+
+  .plans-stats tr .head-stats span{
+    text-align: center;
+    font-size: 1.2rem; 
+    border-radius: 2rem;
+  }
+  
+  .plans-stats tr .head-stats h5{
+    width: max-content;
+    border-radius: 2rem;
+    padding: 0.2rem;
+    font-size: 0.6rem;
+  }
+}
+
