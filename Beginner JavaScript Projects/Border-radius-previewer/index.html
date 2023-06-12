@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+  <title>Border Radius previewer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div id="border-radius-preview">
+      <div id="shape">
+        <p id="current-border-radius">
+          Border-radius: 
+          <span id="preview-topleft">0rem</span>
+          <span id="preview-topright">0rem</span>
+          <span id="preview-bottomright">0rem</span>
+          <span id="preview-bottomleft">0rem</span><span>;</span>
+        </p>
+      </div>
+      <button id="copy">Copy the styles</button>
+    </div>
+
+    <div class="choices">
+      <p>
+        the values will be automaticcaly assigned
+        <br><br>
+        use values with the prefered units(px, rem...)
+      </p>
+      <input id="top-left" type="text" placeholder="top left">
+      <input id="top-right" type="text" placeholder="top right">
+      <input id="bottom-left" type="text" placeholder="bottom left">
+      <input id="bottom-right" type="text" placeholder="bottom right">
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
