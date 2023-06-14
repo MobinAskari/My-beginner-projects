@@ -1,0 +1,94 @@
+.menu-container {
+  width: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 1.5rem;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  z-index: 3;
+  transition: transform 0.4s ease;
+}
+.menu-container.hidden {
+  transform: translateX(100%);
+}
+
+.menu-top-section {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.75rem;
+}
+.menu-top-section span {
+  font-size: 2rem;
+}
+
+.menu-bottom-section {
+  padding-top: 1rem;
+}
+
+/* .menu-bottom-section-buttons {
+
+} */
+.menu-bottom-section-buttons button {
+  margin-top: 1rem;
+  color: var(--color-white);
+  padding: 0.4rem 1.25rem;
+  font-family: var(--font-Poppins);
+  font-weight: bold;
+}
+
+.menu-sign-in {
+  border: 1px solid var(--color-white);
+  transition: all 0.3s ease;
+}
+
+.menu-sign-in:hover {
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+
+.menu-items {
+  overflow-y: scroll;
+  font-family: var(--font-Poppins);
+  font-size: 1.25rem;
+  padding: 1rem 0;
+}
+
+.menu-items ul, .menu-items li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.li-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.li-header span {
+  font-size: 1rem;
+}
+
+/* childrenUl class is generated using JS for the <ul>s inside <li>s */
+.menu-items .childrenUl {
+  padding: 0 1rem;
+  color: #C4C4C4;
+}
+/* or */
+.menu-items ul li ul {
+  padding: 0 1rem;
+  color: #C4C4C4;
+}
+
+.menu-items .childrenUl.hidden {
+  display: none;
+}
+
+.header-socials-container.shown {
+  display: block;
+}

@@ -1,0 +1,272 @@
+.main-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.main-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.5) 20%, rgba(0,0,0,1)), url('../images/600.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: -1;
+  filter: blur(0.3rem);
+}
+
+.main-container section {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.album-cover-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;  
+  padding: 11rem 0 4rem 0;
+}
+
+.album-container {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.album-cover-left-section {
+  display: flex;
+  position: relative;
+  align-items: flex-end;
+}
+
+.album-cover-left-section-text p {
+  font-size: 1.25rem;
+  font-style: italic;
+  color: var(--color-white);
+  font-family: var(--font-general-sans);
+  writing-mode: vertical-lr;
+  transform: rotate(-180deg);
+}
+.album-cover-left-section-text p span {
+  color: var(--color-green);
+}
+
+.album-cover-left-section-image {
+  overflow: hidden;
+}
+
+.album-cover-left-section-image img {
+  width: 24.5rem;
+  height: 24.5rem;
+}
+
+.album-cover-right-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
+/*
+.album-cover-right-section svg {
+  font-family: var(--font-general-sans);
+}
+*/
+
+.album-cover-right-section h2 {
+  color: transparent;
+  -webkit-text-stroke-width: 0.01rem;
+  -webkit-text-stroke-color: white;
+  font-size: 2.25rem;
+}
+.album-cover-right-section h3 {
+  color: white;
+  font-family: var(--font-general-sans);
+}
+
+.album-cover-right-section-profiles {
+  margin: 1.5rem 0;
+  display: flex;
+  gap: 1.25rem;
+}
+
+.album-cover-right-section-profiles img {
+  width: 3.5rem;
+  border-radius: 50%;
+}
+
+.album-cover-right-section-buttons, .album-cover-right-section-buttons button  {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  color: var(--color-white);
+  font-size: 1.25rem;
+  font-family: var(--font-Poppins);
+  transition: all 0.2s ease-in-out;
+}
+
+.album-cover-listen-btn {
+  background-color: var(--color-green);
+  letter-spacing: 0.1rem;
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+}
+
+.album-cover-share-btn {
+  border: 1px solid var(--color-white);
+  letter-spacing: 0.1rem;
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.album-cover-share-btn span {
+  font-size: 1.25rem;
+}
+
+.album-cover-right-section-buttons button:hover {
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+
+.streaming-options-container {
+  display: flex;
+  flex-direction: column;
+  color: var(--color-white);
+}
+
+.streaming-options-container h2 {
+  font-size: 3.25rem;  
+  font-family: var(--font-general-sans);
+  font-weight: 400;
+  margin: 1rem 0;
+}
+
+.options-container {
+  display: flex;
+}
+.options-container div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  font-family: var(--font-general-sans);
+  gap: 0.25rem;
+  border: 1px solid var(--color-white);
+  color: var(--color-white);
+  position: relative;
+}
+
+.options-container div p { 
+  font-family: var(--font-general-sans);
+  visibility: hidden;
+  white-space: nowrap;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  position: absolute;
+  bottom: 85%;
+  z-index: 1;
+}
+
+.options-container div p::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  right: 50%;
+  left: 50%;
+  margin-left: -0.5rem;
+  border: 0.5rem solid;
+  border-color:  #fff transparent transparent transparent;
+}
+
+.options-container div:hover > p {
+  visibility: visible;
+}
+
+.options-container a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+.options-container div span {
+  font-size: 1.5rem;
+}
+
+
+.track-list-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+  color: var(--color-white);
+}
+
+.track-list-container h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.tracks-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.25rem;
+}
+.track-name-and-author {
+  font-size: 0.9rem;
+}
+.track-left-section, .track-right-section {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  line-height: 1.25;
+}
+.track-left-section span {
+  font-size: 2rem;
+}
+
+
+.recommendations-container {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: var(--color-white);
+}
+.recommendations-container h2 {
+  font-size: 3rem;
+}
+
+.releases-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+  grid-gap: 1rem;
+  align-items: center;
+  justify-items: center;
+}
+
+/* .release {
+} */
+
+.release img {
+  width: 9rem;
+  height: 9rem;
+  object-fit: cover;
+}
