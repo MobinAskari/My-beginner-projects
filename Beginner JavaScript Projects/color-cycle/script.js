@@ -96,7 +96,8 @@ function hexToRGB(intervalTimeValue = '250') {
   secondPart =(parseFloat(hexArray[2]) * 16 + parseFloat(hexArray[3]));
   thirdPart = (parseFloat(hexArray[4]) * 16 + parseFloat(hexArray[5]));  
   //console.log(firstPart, secondPart, thirdPart);
-  // changeColor(firstPart, secondPart, thirdPart, intervalTimeValue);
+  
+  changeColor(firstPart, secondPart, thirdPart, intervalTimeValue);
 }
 
 function changeColor(firstPart, secondPart, thirdPart, intervalTimeValue) {
