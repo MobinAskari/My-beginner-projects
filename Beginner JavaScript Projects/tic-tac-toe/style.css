@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(69, 53, 160);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.select-moves button {
+  border: none;
+  padding: 1rem;
+  background-color: rgb(49, 37, 37);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 150ms ease;
+}
+
+.select-moves button:hover:first-child {
+  background-color: rgb(38, 114, 32);
+}
+#circle {
+  color: rgb(38, 114, 32);
+}
+.select-moves button:hover:last-child {
+  background-color: rgb(190, 137, 36);
+}
+#close {
+  color: rgb(190, 137, 36);
+}
+
+.moves button {
+  padding: 1rem;
+  background-color: rgb(49, 37, 37);
+  color: white;
+  border: none;
+  margin: 0;
+  margin-left: -4px;
+  cursor: pointer;
+  transition: all 150ms ease;
+}
+
+.moves button span {
+  font-size: 2rem;
+}
+
+.moves #row1, #row2 {
+  border-bottom: 1px solid white;
+}
+
+#a1, #b1, #c1, #a2, #b2, #c2 {
+  border-right: 1px solid white;
+}
+
+.moves button:hover {
+  background-color: rgb(124, 36, 36);
+}
+
+.status {
+  color: white;
+  font-family: Roboto;
+  font-size: 1.25rem;
+  background-color: rgb(41, 40, 48);
+  border-radius: 5px;
+  padding: 0.5rem;
+  width: 180px;
+}
+
+.status p {
+  position: relative;
+}
+
+.status p > span {
+  position: absolute;
+  bottom: 0;
+  margin-left: 0.75rem;
+}
