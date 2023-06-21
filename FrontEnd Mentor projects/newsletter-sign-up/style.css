@@ -71,8 +71,8 @@ input {
 
 .main-container {
   background-color: var(--color-White);
-  max-width: 70%;
-  height: 25rem;
+  max-width: 50%;
+  height: 26rem;
   border-radius: 1rem;
   display: flex;
   align-items: center;
@@ -103,6 +103,7 @@ input {
   display: flex;
   align-items: center;
   gap: 1rem;
+  font-size: 0.9rem;
 }
 
 .includes img {
@@ -117,7 +118,7 @@ input {
 .email-section-top {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 0.25rem;
+  margin: 0.5rem 0 0.25rem 0;  
 }
 .email-section-top p {
   font-family: RobotoBold;
@@ -128,6 +129,13 @@ input {
   border: 1px solid var(--color-Grey);
   padding: 0.5rem;
   border-radius: 0.25rem;
+  transition: all 0.3s ease;
+}
+.email-section input:hover {
+  border: 1px solid var(--color-Charcoal-Grey);
+}
+.email-section input:focus {
+  border: 1px solid var(--color-Dark-Slate-Grey);
 }
 
 .left-section button {
@@ -136,6 +144,10 @@ input {
   font-family: RobotoBold;
   padding: 0.75rem;
   border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+.left-section button:hover {
+  background-color: var(--color-Tomato);
 }
 
 .right-section {
@@ -144,5 +156,5 @@ input {
 
 .right-section img {
   width: auto;
-  max-height: 22.5rem;
+  max-height: 24rem;
 }
