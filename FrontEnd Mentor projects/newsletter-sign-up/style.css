@@ -77,7 +77,7 @@ input {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
   padding: 1.5rem;
 }
 
@@ -151,10 +151,13 @@ input {
 }
 
 .right-section {
-  display: flex;
+  padding: 0 1rem;
+  height: 100%;
 }
 
 .right-section img {
-  width: auto;
-  max-height: 24rem;
+  width: calc(100% + 2rem);
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
 }
