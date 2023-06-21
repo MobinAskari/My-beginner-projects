@@ -35,6 +35,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 0 2rem;
 }
 
 p, h1, h2, h3, h4, h5, h6 {
@@ -81,6 +82,22 @@ input {
   padding: 1rem;
 }
 
+.main-container.message-layout { 
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: min-content;
+  width: 8rem;
+  padding: 2rem;
+}
+.main-container.message-layout p { 
+  margin-bottom: 2rem;
+  font-size: 1rem;
+} 
+.main-container.message-layout img {
+  width: 3rem;
+}
+
 .left-section {
   display: flex;
   flex-direction: column;
@@ -96,7 +113,7 @@ input {
 .includes-container {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: 0.5rem;
 }
 
 .includes {
@@ -124,21 +141,37 @@ input {
   font-family: RobotoBold;
   font-size: 0.8rem;
 }
-
-.email-section input {
+.email-section-top .err-message {
+  color: var(--color-Tomato); 
+}
+.email-section-top .err-message.hidden {
+  display: none;
+}
+.email-section .js-email-input {
   border: 1px solid var(--color-Grey);
-  padding: 0.5rem;
+  padding: 0.75rem 1.5rem;
   border-radius: 0.25rem;
   transition: all 0.3s ease;
 }
-.email-section input:hover {
+.js-email-input.err {
+  background-color: hsla(4, 100%, 67%, 0.233);
+}
+.email-section .js-email-input.err::placeholder {
+  color: var(--color-Tomato);
+} 
+.email-section .js-email-input:hover {
   border: 1px solid var(--color-Charcoal-Grey);
 }
-.email-section input:focus {
+.email-section .js-email-input:focus {
   border: 1px solid var(--color-Dark-Slate-Grey);
 }
 
-.left-section button {
+.main-container.message-layout .js-dismiss-button {
+  margin-top: auto;
+  width: 100%;
+}
+
+.js-dismiss-button, .js-submit-button {
   background-color: var(--color-Dark-Slate-Grey);
   color: var(--color-White);
   font-family: RobotoBold;
@@ -146,7 +179,7 @@ input {
   border-radius: 0.5rem;
   transition: all 0.3s ease;
 }
-.left-section button:hover {
+.js-dismiss-button:hover, .js-dismiss-button:hover {
   background-color: var(--color-Tomato);
 }
 
@@ -162,6 +195,9 @@ input {
 
 
 @media screen and (max-width: 505px) {
+  body {
+    padding: 0;
+  }
   .main-container {
     width: 100%;
     height: fit-content;
@@ -170,16 +206,27 @@ input {
     flex-direction: column-reverse;
     padding: 0 0;
   }
+  .main-container.message-layout {
+    padding: 1.5rem;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+  .main-container.message-layout img {
+    margin-top: 50%;
+  }
+
   .right-section {
     padding: 0;
     width: 100%;
     height: 50%;
   }
   .left-section {
-    padding: 0;
+    padding: 0.5rem;
+    gap: 1.5rem;
   }
   .left-section * {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
   .right-section img {
     width: 100%;
