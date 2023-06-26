@@ -521,7 +521,8 @@ generateRandomButton.addEventListener('click', () => {
 async function showRandomMeal(callback) {
   const data = await fetch(`https://www.themealdb.com/api/json/v1/1/random.php`);
   const result = await data.json();
-  callback(result);
+  console.log();
+  callback(result, result.meals[0].idMeal);
 }
 
 /* Search meals */
@@ -604,7 +605,7 @@ function getShownMeals(data)  {
 function showParticularMeal(data, id) {
   let meal; 
   data.meals.find(specificMeal => {
-    specificMeal.idMeal == id ? meal = specificMeal : meal = data.meals[0]
+    specificMeal.idMeal == id ? meal = specificMeal : ''
   });
   mainContainer.classList.toggle('meal-shown');
 
