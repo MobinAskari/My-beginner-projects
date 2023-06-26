@@ -264,6 +264,16 @@ input {
   padding: 0rem;
   background-color: var(--color-white);
 }
+
+.main-container.meal-shown .profile-section, 
+.main-container.meal-shown .search-section,
+.main-container.meal-shown .categories-section,
+.main-container.meal-shown .meals-section, 
+.main-container.meal-shown .footer-menu-section
+{
+  display: none;
+}
+
 .main-container.meal-shown section { 
   padding: 0 1.25rem;
 }
