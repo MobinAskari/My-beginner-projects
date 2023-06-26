@@ -1,0 +1,118 @@
+/* - Font size (quote): 28px
+- Family: [Manrope](https://fonts.google.com/specimen/Manrope)
+- Weights: 800 */
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;800&display=swap');
+
+:root {
+  --color-Light-Cyan: hsl(193, 38%, 86%);
+  --color-Neon-Green: hsl(150, 100%, 66%);
+  --color-Grayish-Blue: hsl(217, 19%, 38%);
+  --color-Dark-Grayish-Blue: hsl(217, 19%, 24%);
+  --color-DarkBlue: hsl(218, 23%, 16%);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Manrope;
+  font-weight: 800;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  background-color: var(--color-DarkBlue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.main-container {
+  max-width: 20rem;
+  height: 13rem;
+  border-radius: 0.5rem;
+  background-color: var(--color-Dark-Grayish-Blue);
+  text-align: center;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  position: relative;
+}
+
+.advice-title { 
+  color: var(--color-Neon-Green);
+  font-size: 0.8rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.advice-text {
+  color: var(--color-Light-Cyan);
+}
+
+.get-advice {
+  width: 2.5rem;
+  padding: 0.75rem;
+  background-color: var(--color-Neon-Green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: -1rem;
+  transition: all 0.2s ease-in-out;
+}
+.get-advice img {
+  width: 1rem;
+}
+
+.get-advice:hover {
+  box-shadow: 0 0 15px 7px hsla(150, 100%, 66%, 0.420);
+}
+
+@media screen and (max-width: 324px) {
+  .main-container {
+    height: fit-content;
+  }
+}
