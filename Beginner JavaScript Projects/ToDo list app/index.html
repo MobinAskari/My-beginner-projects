@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todolist-app</title>
+  <link rel="stylesheet" href="newStyle.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body class="darkmode">
+  <header class="header-container">
+    <button class="js-open-menu-button">
+      <span class="material-symbols-sharp">
+        sort
+      </span>
+    </button>
+    <h4>Todos</h4>
+    <button class="js-dark-mode-button">
+      <span class="material-symbols-sharp">
+        dark_mode
+      </span>
+    </button>
+    <section class="menu-section">
+      <ul>
+        <!--
+        <li>
+          <button class="js-close-menu-button"><span class="material-symbols-sharp">close</span></button>
+        </li>
+        -->
+        <li><button class="js-all-sort-button">All</button></li>
+        <li><button class="js-categories-sort-button">Categories</button></li>
+        <li><button class="js-completed-sort-button">Completed</button></li>
+        <li><button class="js-notCompleted-sort-button">Not completed</button></li>
+      </ul>
+    </section>
+  </header>
+
+  <main class="main-container">
+    <section class="recent-completed-todo-section">
+        <span class="material-symbols-sharp" id="checkmark">
+          check
+        </span>
+        <p class="js-last-completed-todo-element">
+          last completed ToDo appears here!
+        </p>
+        <p class="js-last-completed-todo-time-elapsed-element">
+          Time Elapsed
+        </p>
+    </section>
+
+    <section class="todos-section js-todo-section shown">
+    
+      <div class="sub-category">
+        <h3>Category</h3>
+        <div class="sub-category-todos-container">
+          <div class="todo-wrapper">
+            <div class="todo-action-buttons-wrapper">
+              <button class="js-complete-button complete-button">
+                <span class="material-symbols-sharp">
+                  check
+                </span>
+              </button>
+              <button class="js-delete-button delete-button">
+                <span class="material-symbols-sharp">
+                  delete_forever
+                </span>
+              </button>
+              <button class="js-category-button category-button">
+                <span class="material-symbols-sharp spacing">
+                  category
+                </span>
+              </button>
+            </div>
+          
+            <div class="todo-text-wrapper">
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo, iusto? Nisi voluptas, atque itaque vero culpa at ipsa accusamus ullam facilis veritatis consequatur neque tempora, minus, maxime laborum debitis deserunt!</p>  
+            </div> 
+    
+            <div class="todo-date-wrapper">
+                <span>Y 23</span>
+                <span>M 16</span>
+                <span>D 15</span>
+            </div>
+          </div> 
+        </div>
+      </div>
+    
+    </section>
+
+    <section class="add-todo-section js-add-todo-section">
+      <input type="text" placeholder="Write a todo"
+      id="todo-text">
+      <input type="text" placeholder="List or a category" id="todo-category">
+      <input type="date" id="todo-date">
+      <button id="add-todo">Submit</button>
+    </section>
+
+    <button class="open-add-menu js-open-add-menu-button">
+      <span class="material-symbols-sharp">add</span>
+    </button>
+  </main>
+
+<script type="module" src="newScript.js"></script>
+</body>
+</html>
