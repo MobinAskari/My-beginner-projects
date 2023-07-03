@@ -1,9 +1,11 @@
 // https://www.omdbapi.com/?i=tt3896198&apikey=
 // https://www.omdbapi.com/?t=breaking&apikey=
 
-const datas = {
+const datas = JSON.parse(localStorage.getItem('datas')) ?? {
   movies: [
     {
+      "id": 1,
+      "bookmarked": false,
       "Title": "Guardians of the Galaxy Vol. 2",
       "Year": "2017",
       "Rated": "PG-13",
@@ -45,6 +47,8 @@ const datas = {
       "xp": "20"
     },
     {
+      "id": 2,
+      "bookmarked": false,
       "Title": "Breaking",
       "Year": "2022",
       "Rated": "PG-13",
@@ -85,6 +89,8 @@ const datas = {
       "Response": "True"
     },
     {
+      "id": 3,
+      "bookmarked": false,
       "Title": "1917",
       "Year": "2019",
       "Rated": "R",
@@ -125,6 +131,8 @@ const datas = {
       "Response": "True"
     },
     {
+      "id": 4,
+      "bookmarked": false,
       "Title": "Sicario",
       "Year": "2015",
       "Rated": "R",
@@ -165,6 +173,8 @@ const datas = {
       "Response": "True"
     },
     {
+      "id": 5,
+      "bookmarked": false,
       "Title": "Cinderella",
       "Year": "2015",
       "Rated": "PG",
@@ -205,6 +215,21 @@ const datas = {
       "Response": "True"
     },
   ],
+}
+
+export const handleBookmarks = (id, req) => {
+  
+  const movie = datas.movies.find(movie => movie.id === id);
+
+  if(req === 'set') {
+    movie.bookmarked = true;
+    localStorage.setItem('datas', JSON.stringify(datas))
+  }
+  if (req === 'del') { 
+    movie.bookmarked = false;
+    localStorage.setItem('datas', JSON.stringify(datas))
+  }
+   
 }
 
 export default datas;

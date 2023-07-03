@@ -402,6 +402,9 @@ body:has(.left-sidebar-container.hidden)
 .genres-container ul li:hover {
   box-shadow: 0px 0px 10px 2px var(--Darker-red);
 }
+.genres-container ul li button.active {
+  background: var(--Darker-red);
+}
 .genres-container ul li button span {
   font-size: 1.25rem;
 }
@@ -544,6 +547,7 @@ body:has(.left-sidebar-container.hidden)
   height: 3rem;
   border-radius: 0.5rem;
   object-fit: cover;
+  background-color: var(--Background-color);
 }
 .movie-suggestion-posters img.active {
   box-shadow: 0px 0px 10px 2px var(--Soft-orange);
@@ -681,6 +685,9 @@ body:has(.left-sidebar-container.hidden)
   padding: .25rem;
   border-radius: 50%;
   background-color: var(--Background-color-low-opacity);
+}
+.show-movie-buttons button.bookmarked {
+  background-color: var(--Darker-red);
 }
 .show-movie-buttons button span {
   font-size: 2rem;
