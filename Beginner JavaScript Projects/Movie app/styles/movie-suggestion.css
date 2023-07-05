@@ -1,0 +1,135 @@
+.movie-suggestion-section {
+  width: 100%;
+  min-height: 18rem;
+}
+
+.movie-suggestion-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  /* background-image: url(images/posters/blade-runner-2049.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; */
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+  padding: 1.5rem;
+}
+.movie-suggestion-wrapper .movie-suggestion-background {
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.4;
+  object-fit: cover;
+}
+
+.movie-suggestion-top-container {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 0.8rem;
+  flex-wrap: wrap;
+}
+.movie-suggestion-top-container p {
+  color: var(--Text-color);
+} .movie-suggestion-xp {
+  max-width: 3rem;
+  text-align: center;
+  border-radius: 2rem; 
+  padding: .25rem;
+  background-color: var(--Background-color-low-opacity);
+}
+.movie-suggestion-top-friends-wrapper {
+  display: flex;
+  position: relative;
+} 
+.movie-suggestion-top-friends-wrapper p {
+  margin-left: 3.75rem;
+  color: var(--Small-texts-color);
+}
+.movie-suggestion-top-friends-wrapper img {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  display: inline;
+}
+.movie-suggestion-top-friends-wrapper .friends-iamge-1 {
+  top: -.25rem;
+  position: absolute;
+  z-index: 3;
+}
+.movie-suggestion-top-friends-wrapper .friends-iamge-2 {
+  position: absolute;
+  top: -.25rem;
+  left: 1rem;
+  z-index: 1;
+}
+.movie-suggestion-top-friends-wrapper .friends-iamge-3 {
+  position: absolute;
+  top: -.25rem;
+  left: 2rem;
+}
+
+.movie-suggestion-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.movie-suggestion-info h2 {
+  color: var(--Text-color);
+}
+.movie-suggestion-info p {
+  color: var(--Small-texts-color);
+  font-size: .8rem;
+}
+.movie-suggestion-info div {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+.movie-suggestion-info button {
+  width: min-content;
+  display: flex;
+  align-items: center;
+  padding: .4rem 0.75rem;
+  border-radius: .75rem;
+  font-size: .7rem;
+  color: var(--Text-color);
+  background-color: var(--Lighter-red);
+}
+.movie-suggestion-info button span {
+  font-size: 1.25rem;
+}
+.movie-suggestion-info .movie-suggestion-info-watch{
+  box-shadow: 0px 0px 8px 1px var(--Darker-red);
+}
+.movie-suggestion-info .movie-suggestion-info-add {
+  background-color: var(--Background-color-low-opacity);
+  padding: .4rem 0.5rem;
+}
+
+
+.movie-suggestion-bottom-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.movie-suggestion-posters {
+  display: flex;
+  gap: 1rem;
+}
+.movie-suggestion-posters img {
+  width: 6rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  background-color: var(--Background-color);
+}
+.movie-suggestion-posters img.active {
+  box-shadow: 0px 0px 10px 2px var(--Soft-orange);
+}

@@ -215,6 +215,536 @@ const datas = JSON.parse(localStorage.getItem('datas')) ?? {
       "Response": "True"
     },
   ],
+  cinemaSchedules: [
+    {
+      id: 1,
+      leftSeats: [
+        [
+            {
+                "row": 0,
+                "col": 0,
+                "status": "reserved"
+            },
+            {
+                "row": 0,
+                "col": 1,
+                "status": "reserved"
+            },
+        ],
+        [
+            {
+                "row": 1,
+                "col": 0,
+                "status": "reserved"
+            },
+            {
+                "row": 1,
+                "col": 1,
+                "status": "reserved"
+            },
+            {
+                "row": 1,
+                "col": 2,
+                "status": "reserved"
+            },
+        ],
+        [
+            {
+                "row": 2,
+                "col": 0,
+                "status": "reserved"
+            },
+            {
+                "row": 2,
+                "col": 1,
+                "status": "reserved"
+            },
+            {
+                "row": 2,
+                "col": 2,
+                "status": "available"
+            },
+            {
+                "row": 2,
+                "col": 3,
+                "status": "reserved"
+            },
+        ],
+        [
+          {
+              "row": 3,
+              "col": 0,
+              "status": "available"
+          },
+          {
+              "row": 3,
+              "col": 1,
+              "status": "reserved"
+          },
+          {
+              "row": 3,
+              "col": 2,
+              "status": "reserved"
+          },
+          {
+              "row": 3,
+              "col": 3,
+              "status": "reserved"
+          },
+        ],
+        [
+          {
+              "row": 4,
+              "col": 0,
+              "status": "available"
+          },
+          {
+              "row": 4,
+              "col": 1,
+              "status": "reserved"
+          },
+          {
+              "row": 4,
+              "col": 2,
+              "status": "available"
+          },
+          {
+              "row": 4,
+              "col": 3,
+              "status": "available"
+          },
+        ],
+        [
+          {
+              "row": 5,
+              "col": 0,
+              "status": "reserved"
+          },
+          {
+              "row": 5,
+              "col": 1,
+              "status": "available"
+          },
+          {
+              "row": 5,
+              "col": 2,
+              "status": "reserved"
+          },
+        ],
+        [
+          {
+              "row": 6,
+              "col": 0,
+              "status": "available"
+          },
+          {
+              "row": 6,
+              "col": 1,
+              "status": "reserved"
+          },
+        ],
+      ],
+      rightSeats: [
+        [
+            {
+                "row": 0,
+                "col": 0,
+                "status": "reserved"
+            },
+            {
+                "row": 0,
+                "col": 1,
+                "status": "reserved"
+            },
+        ],
+        [
+            {
+                "row": 1,
+                "col": 0,
+                "status": "available"
+            },
+            {
+                "row": 1,
+                "col": 1,
+                "status": "reserved"
+            },
+            {
+                "row": 1,
+                "col": 2,
+                "status": "available"
+            },
+        ],
+        [
+            {
+                "row": 2,
+                "col": 0,
+                "status": "available"
+            },
+            {
+                "row": 2,
+                "col": 1,
+                "status": "available"
+            },
+            {
+                "row": 2,
+                "col": 2,
+                "status": "available"
+            },
+            {
+                "row": 2,
+                "col": 3,
+                "status": "reserved"
+            },
+        ],
+        [
+          {
+              "row": 3,
+              "col": 0,
+              "status": "available"
+          },
+          {
+              "row": 3,
+              "col": 1,
+              "status": "reserved"
+          },
+          {
+              "row": 3,
+              "col": 2,
+              "status": "available"
+          },
+          {
+              "row": 3,
+              "col": 3,
+              "status": "available"
+          },
+        ],
+        [
+          {
+              "row": 4,
+              "col": 0,
+              "status": "available"
+          },
+          {
+              "row": 4,
+              "col": 1,
+              "status": "available"
+          },
+          {
+              "row": 4,
+              "col": 2,
+              "status": "available"
+          },
+          {
+              "row": 4,
+              "col": 3,
+              "status": "reserved"
+          },
+        ],
+        [
+          {
+              "row": 5,
+              "col": 0,
+              "status": "reserved"
+          },
+          {
+              "row": 5,
+              "col": 1,
+              "status": "available"
+          },
+          {
+              "row": 5,
+              "col": 2,
+              "status": "available"
+          },
+        ],
+        [
+          {
+              "row": 6,
+              "col": 0,
+              "status": "reserved"
+          },
+          {
+              "row": 6,
+              "col": 1,
+              "status": "available"
+          },
+        ],
+      ],
+      dates: [
+        "July 2",
+        "July 3",
+      ],
+      times: [
+        "18:00",
+        "19:00"
+      ],
+      pricePerSeat: 1200,
+    },
+    {
+      id: 2,
+      leftSeats: [
+        [
+            {
+                "row": 0,
+                "col": 0,
+                "status": "reserved"
+            },
+            {
+                "row": 0,
+                "col": 1,
+                "status": "available"
+            },
+        ],
+        [
+            {
+                "row": 1,
+                "col": 0,
+                "status": "reserved"
+            },
+            {
+                "row": 1,
+                "col": 1,
+                "status": "available"
+            },
+            {
+                "row": 1,
+                "col": 2,
+                "status": "available"
+            },
+        ],
+        [
+            {
+                "row": 2,
+                "col": 0,
+                "status": "reserved"
+            },
+            {
+                "row": 2,
+                "col": 1,
+                "status": "available"
+            },
+            {
+                "row": 2,
+                "col": 2,
+                "status": "available"
+            },
+            {
+                "row": 2,
+                "col": 3,
+                "status": "reserved"
+            },
+        ],
+        [
+          {
+              "row": 3,
+              "col": 0,
+              "status": "available"
+          },
+          {
+              "row": 3,
+              "col": 1,
+              "status": "available"
+          },
+          {
+              "row": 3,
+              "col": 2,
+              "status": "reserved"
+          },
+          {
+              "row": 3,
+              "col": 3,
+              "status": "available"
+          },
+        ],
+        [
+          {
+              "row": 4,
+              "col": 0,
+              "status": "reserved"
+          },
+          {
+              "row": 4,
+              "col": 1,
+              "status": "reserved"
+          },
+          {
+              "row": 4,
+              "col": 2,
+              "status": "available"
+          },
+          {
+              "row": 4,
+              "col": 3,
+              "status": "available"
+          },
+        ],
+        [
+          {
+              "row": 5,
+              "col": 0,
+              "status": "available"
+          },
+          {
+              "row": 5,
+              "col": 1,
+              "status": "reserved"
+          },
+          {
+              "row": 5,
+              "col": 2,
+              "status": "available"
+          },
+        ],
+        [
+          {
+              "row": 6,
+              "col": 0,
+              "status": "available"
+          },
+          {
+              "row": 6,
+              "col": 1,
+              "status": "reserved"
+          },
+        ],
+      ],
+      rightSeats: [
+        [
+            {
+                "row": 0,
+                "col": 0,
+                "status": "reserved"
+            },
+            {
+                "row": 0,
+                "col": 1,
+                "status": "available"
+            },
+        ],
+        [
+            {
+                "row": 1,
+                "col": 0,
+                "status": "reserved"
+            },
+            {
+                "row": 1,
+                "col": 1,
+                "status": "available"
+            },
+            {
+                "row": 1,
+                "col": 2,
+                "status": "available"
+            },
+        ],
+        [
+            {
+                "row": 2,
+                "col": 0,
+                "status": "reserved"
+            },
+            {
+                "row": 2,
+                "col": 1,
+                "status": "reserved"
+            },
+            {
+                "row": 2,
+                "col": 2,
+                "status": "reserved"
+            },
+            {
+                "row": 2,
+                "col": 3,
+                "status": "reserved"
+            },
+        ],
+        [
+          {
+              "row": 3,
+              "col": 0,
+              "status": "available"
+          },
+          {
+              "row": 3,
+              "col": 1,
+              "status": "reserved"
+          },
+          {
+              "row": 3,
+              "col": 2,
+              "status": "available"
+          },
+          {
+              "row": 3,
+              "col": 3,
+              "status": "reserved"
+          },
+        ],
+        [
+          {
+              "row": 4,
+              "col": 0,
+              "status": "reserved"
+          },
+          {
+              "row": 4,
+              "col": 1,
+              "status": "available"
+          },
+          {
+              "row": 4,
+              "col": 2,
+              "status": "available"
+          },
+          {
+              "row": 4,
+              "col": 3,
+              "status": "available"
+          },
+        ],
+        [
+          {
+              "row": 5,
+              "col": 0,
+              "status": "reserved"
+          },
+          {
+              "row": 5,
+              "col": 1,
+              "status": "available"
+          },
+          {
+              "row": 5,
+              "col": 2,
+              "status": "available"
+          },
+        ],
+        [
+          {
+              "row": 6,
+              "col": 0,
+              "status": "reserved"
+          },
+          {
+              "row": 6,
+              "col": 1,
+              "status": "available"
+          },
+        ],
+      ],
+      dates: [
+        "July 2",
+        "July 4",
+      ],
+      times: [
+        "18:00",
+        "21:00"
+      ],
+      pricePerSeat: 1200,
+    },
+  ]
 }
 
 export const handleBookmarks = (id, req) => {
@@ -223,13 +753,17 @@ export const handleBookmarks = (id, req) => {
 
   if(req === 'set') {
     movie.bookmarked = true;
-    localStorage.setItem('datas', JSON.stringify(datas))
+    updateLocalStorage('datas', datas)
   }
   if (req === 'del') { 
     movie.bookmarked = false;
-    localStorage.setItem('datas', JSON.stringify(datas))
+    updateLocalStorage('datas', datas)
   }
    
+}
+
+export const updateLocalStorage = (key, data) => {
+  localStorage.setItem(key, JSON.stringify(data))
 }
 
 export default datas;

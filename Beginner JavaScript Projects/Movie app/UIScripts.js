@@ -1,3 +1,5 @@
+import { updateLocalStorage } from "./datas.js";
+
 const bodyEl = document.body;
 
 const leftSidebarContainer = document.querySelector('.left-sidebar-container');
@@ -17,8 +19,7 @@ export const toggleTheme = () => {
 
   bodyEl.classList.add(currentTheme);
 
-  localStorage.setItem('theme', JSON.stringify(currentTheme));
-
+  updateLocalStorage('theme', currentTheme)
 }
 
 window.addEventListener('resize', () => {  

@@ -1,0 +1,247 @@
+.movie-details-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: var(--header-height);
+  /* height: calc(100% - var(--header-height)); */
+  /* height: 100%; */
+  background-color: var(--Card-BG);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+.movie-details-box.hidden {
+  display: none;
+}
+
+.movie-details-box__header{
+  height: 30%;
+}
+
+.movie-details-box__header_buttons {
+  padding: 1rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.movie-details-box__header_buttons button {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  color: var(--Text-color);
+  padding: .25rem;
+  border-radius: 2rem;
+  background-color: var(--Background-color-low-opacity);
+}
+.movie-details-box__header_buttons button.bookmarked {
+  background-color: var(--Darker-red);
+}
+.movie-details-box__header_buttons button span {
+  font-size: 1.75rem;
+}
+.movie-details-box__header img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.movie-details-box__footer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 70%;
+  color: var(--Text-color);
+  position: relative;
+}
+
+.movie-ratings-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+
+.imdb-rating {
+  display: flex;
+  padding: .25rem;
+  border-radius: 0.5rem;
+  background-color: var(--Soft-orange);
+  color: var(--Background-color);
+}
+.movie-review {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: .25rem;
+  color: var(--Soft-orange);
+}
+.movie-review div {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.movie-name-wrapper {
+  padding: 0.5rem;
+}
+
+.movie-categories-wrapper {
+  padding: 0.5rem;
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: .5rem;
+}
+.movie-categories-wrapper li {
+  background-color: var(--Background-color);
+  padding: .5rem .75rem;
+  font-size: 0.8rem;
+  border-radius: 2rem;
+  color: var(--Small-texts-color);
+}
+
+.movie-description-wrapper {
+  padding: 0.5rem;
+  flex: 1;
+}
+
+.movie-description-wrapper p {
+  line-height: 1.25;
+  display: -webkit-box; 
+  -webkit-line-clamp: 9; 
+  -moz-box-orient: vertical;  
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.reservation-actions-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background: linear-gradient(to top, var(--Background-color), var(--Background-color-low-opacity));
+}
+.reservation-actions-container button {
+  background-color: var(--Soft-orange);
+  color: var(--Text-color);
+  padding: 0.5rem 1.25rem;
+  border-radius: 2rem;
+}
+
+.show-reservation-card {
+  margin: 0 auto;
+}
+
+
+.reservation-seats-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.reservation-seats-container {
+  display: flex;
+  gap: 0.5rem;
+  background-color: var(--Background-color);
+  padding: 2rem 1rem;
+  border-radius: 8rem;
+}
+
+.left-seats-container .row {
+  display: flex;
+  justify-content: flex-end;
+}
+.right-seats-container .row {
+  display: flex;
+  justify-content: flex-start;
+}
+.seat {
+  width: 1.25rem;
+  height: 1.25rem;
+  background-color: var(--Small-texts-color);
+  margin: .25rem;
+  border-radius: .25rem;
+}
+
+.seats-status-description-container {
+  width: 85%;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.seats-status-description-container div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--Darker-blue);
+}
+.seats-indicator {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+}
+.seats-indicator.available,
+.seat.available {
+  background-color: var(--Lime-Green);
+}
+.seats-indicator.reserved,
+.seat.reserved {
+  background-color: var(--Darker-red);
+}
+.seats-indicator.selected,
+.seat.selected {
+  background-color: var(--Soft-orange);
+}
+
+.reservation-dates-container, 
+.reservation-times-container {
+  color: var(--Text-color);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.reservation-dates-wrapper,
+.reservation-times-wrapper {
+  display: flex;
+  gap: .75rem;
+}
+.reservation-date,
+.reservation-time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.5rem;
+  border-radius: .5rem;
+  background-color: var(--Background-color);
+  color: var(--Text-color);
+}
+.reservation-date.selected,
+.reservation-time.selected {
+  background-color: var(--Text-color);
+  color: var(--Background-color);
+}
+
+.total-price-wrapper h4 {
+  color: var(--Text-color);
+}
+
+.total-price-wrapper p {
+  color: var(--Soft-orange);
+}
+
+.buy-wrapper button {
+  background-color: var(--Soft-orange);
+  color: var(--Text-color);
+  padding: 0.5rem 3rem;
+  border-radius: 2rem;
+}
