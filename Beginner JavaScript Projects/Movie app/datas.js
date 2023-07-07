@@ -223,124 +223,146 @@ const datas = JSON.parse(localStorage.getItem('datas')) ?? {
             {
                 "row": 0,
                 "col": 0,
-                "status": "reserved"
+                "status": "reserved",
+                "reservedByUser": false
             },
             {
                 "row": 0,
                 "col": 1,
-                "status": "reserved"
+                "status": "reserved",
+                "reservedByUser": false
             },
         ],
         [
             {
                 "row": 1,
                 "col": 0,
-                "status": "reserved"
+                "status": "reserved",
+                "reservedByUser": false
             },
             {
                 "row": 1,
                 "col": 1,
-                "status": "reserved"
+                "status": "reserved",
+                "reservedByUser": false
             },
             {
                 "row": 1,
                 "col": 2,
-                "status": "reserved"
+                "status": "reserved",
+                "reservedByUser": false
             },
         ],
         [
             {
                 "row": 2,
                 "col": 0,
-                "status": "reserved"
+                "status": "reserved",
+                "reservedByUser": false
             },
             {
                 "row": 2,
                 "col": 1,
-                "status": "reserved"
+                "status": "reserved",
+                "reservedByUser": false
             },
             {
                 "row": 2,
                 "col": 2,
-                "status": "available"
+                "status": "available",
+                "reservedByUser": false,
             },
             {
                 "row": 2,
                 "col": 3,
-                "status": "reserved"
+                "status": "reserved",
+                "reservedByUser": false
             },
         ],
         [
           {
               "row": 3,
               "col": 0,
-              "status": "available"
+              "status": "available",
+              "reservedByUser": false,
           },
           {
               "row": 3,
               "col": 1,
-              "status": "reserved"
+              "status": "reserved",
+              "reservedByUser": false
           },
           {
               "row": 3,
               "col": 2,
-              "status": "reserved"
+              "status": "reserved",
+              "reservedByUser": false
           },
           {
               "row": 3,
               "col": 3,
-              "status": "reserved"
+              "status": "reserved",
+              "reservedByUser": false
           },
         ],
         [
           {
               "row": 4,
               "col": 0,
-              "status": "available"
+              "status": "available",
+              "reservedByUser": false,
           },
           {
               "row": 4,
               "col": 1,
-              "status": "reserved"
+              "status": "reserved",
+              "reservedByUser": false
           },
           {
               "row": 4,
               "col": 2,
-              "status": "available"
+              "status": "available",
+              "reservedByUser": false,
           },
           {
               "row": 4,
               "col": 3,
-              "status": "available"
+              "status": "available",
+              "reservedByUser": false,
           },
         ],
         [
           {
               "row": 5,
               "col": 0,
-              "status": "reserved"
+              "status": "reserved",
+              "reservedByUser": false
           },
           {
               "row": 5,
               "col": 1,
-              "status": "available"
+              "status": "available",
+              "reservedByUser": false,
           },
           {
               "row": 5,
               "col": 2,
-              "status": "reserved"
+              "status": "reserved",
+              "reservedByUser": false
           },
         ],
         [
           {
               "row": 6,
               "col": 0,
-              "status": "available"
+              "status": "available",
+              "reservedByUser": false,
           },
           {
               "row": 6,
               "col": 1,
-              "status": "reserved"
+              "status": "reserved",
+              "reservedByUser": false
           },
         ],
       ],
@@ -349,124 +371,146 @@ const datas = JSON.parse(localStorage.getItem('datas')) ?? {
             {
                 "row": 0,
                 "col": 0,
-                "status": "reserved"
+                "status": "reserved",
+                "reservedByUser": false
             },
             {
                 "row": 0,
                 "col": 1,
-                "status": "reserved"
+                "status": "reserved",
+                "reservedByUser": false
             },
         ],
         [
             {
                 "row": 1,
                 "col": 0,
-                "status": "available"
+                "status": "available",
+                "reservedByUser": false,
             },
             {
                 "row": 1,
                 "col": 1,
-                "status": "reserved"
+                "status": "reserved",
+                "reservedByUser": false
             },
             {
                 "row": 1,
                 "col": 2,
-                "status": "available"
+                "status": "available",
+                "reservedByUser": false,
             },
         ],
         [
             {
                 "row": 2,
                 "col": 0,
-                "status": "available"
+                "status": "available",
+                "reservedByUser": false,
             },
             {
                 "row": 2,
                 "col": 1,
-                "status": "available"
+                "status": "available",
+                "reservedByUser": false,
             },
             {
                 "row": 2,
                 "col": 2,
-                "status": "available"
+                "status": "available",
+                "reservedByUser": false,
             },
             {
                 "row": 2,
                 "col": 3,
-                "status": "reserved"
+                "status": "reserved",
+                "reservedByUser": false
             },
         ],
         [
           {
               "row": 3,
               "col": 0,
-              "status": "available"
+              "status": "available",
+              "reservedByUser": false,
           },
           {
               "row": 3,
               "col": 1,
-              "status": "reserved"
+              "status": "reserved",
+              "reservedByUser": false
           },
           {
               "row": 3,
               "col": 2,
-              "status": "available"
+              "status": "available",
+              "reservedByUser": false,
           },
           {
               "row": 3,
               "col": 3,
-              "status": "available"
+              "status": "available",
+              "reservedByUser": false,
           },
         ],
         [
           {
               "row": 4,
               "col": 0,
-              "status": "available"
+              "status": "available",
+              "reservedByUser": false,
           },
           {
               "row": 4,
               "col": 1,
-              "status": "available"
+              "status": "available",
+              "reservedByUser": false,
           },
           {
               "row": 4,
               "col": 2,
-              "status": "available"
+              "status": "available",
+              "reservedByUser": false,
           },
           {
               "row": 4,
               "col": 3,
-              "status": "reserved"
+              "status": "reserved",
+              "reservedByUser": false
           },
         ],
         [
           {
               "row": 5,
               "col": 0,
-              "status": "reserved"
+              "status": "reserved",
+              "reservedByUser": false
           },
           {
               "row": 5,
               "col": 1,
-              "status": "available"
+              "status": "available",
+              "reservedByUser": false,
           },
           {
               "row": 5,
               "col": 2,
-              "status": "available"
+              "status": "available",
+              "reservedByUser": false,
           },
         ],
         [
           {
               "row": 6,
               "col": 0,
-              "status": "reserved"
+              "status": "reserved",
+              "reservedByUser": false
           },
           {
               "row": 6,
               "col": 1,
-              "status": "available"
+              "status": "available",
+              "reservedByUser": false,
           },
         ],
       ],
@@ -487,124 +531,146 @@ const datas = JSON.parse(localStorage.getItem('datas')) ?? {
             {
                 "row": 0,
                 "col": 0,
-                "status": "reserved"
+                "status": "reserved",
+                "reservedByUser": false
             },
             {
                 "row": 0,
                 "col": 1,
-                "status": "available"
+                "status": "available",
+                "reservedByUser": false,
             },
         ],
         [
             {
                 "row": 1,
                 "col": 0,
-                "status": "reserved"
+                "status": "reserved",
+                "reservedByUser": false
             },
             {
                 "row": 1,
                 "col": 1,
-                "status": "available"
+                "status": "available",
+                "reservedByUser": false,
             },
             {
                 "row": 1,
                 "col": 2,
-                "status": "available"
+                "status": "available",
+                "reservedByUser": false,
             },
         ],
         [
             {
                 "row": 2,
                 "col": 0,
-                "status": "reserved"
+                "status": "reserved",
+                "reservedByUser": false
             },
             {
                 "row": 2,
                 "col": 1,
-                "status": "available"
+                "status": "available",
+                "reservedByUser": false,
             },
             {
                 "row": 2,
                 "col": 2,
-                "status": "available"
+                "status": "available",
+                "reservedByUser": false,
             },
             {
                 "row": 2,
                 "col": 3,
-                "status": "reserved"
+                "status": "reserved",
+                "reservedByUser": false
             },
         ],
         [
           {
               "row": 3,
               "col": 0,
-              "status": "available"
+              "status": "available",
+              "reservedByUser": false,
           },
           {
               "row": 3,
               "col": 1,
-              "status": "available"
+              "status": "available",
+              "reservedByUser": false,
           },
           {
               "row": 3,
               "col": 2,
-              "status": "reserved"
+              "status": "reserved",
+              "reservedByUser": false
           },
           {
               "row": 3,
               "col": 3,
-              "status": "available"
+              "status": "available",
+              "reservedByUser": false,
           },
         ],
         [
           {
               "row": 4,
               "col": 0,
-              "status": "reserved"
+              "status": "reserved",
+              "reservedByUser": false
           },
           {
               "row": 4,
               "col": 1,
-              "status": "reserved"
+              "status": "reserved",
+              "reservedByUser": false
           },
           {
               "row": 4,
               "col": 2,
-              "status": "available"
+              "status": "available",
+              "reservedByUser": false,
           },
           {
               "row": 4,
               "col": 3,
-              "status": "available"
+              "status": "available",
+              "reservedByUser": false,
           },
         ],
         [
           {
               "row": 5,
               "col": 0,
-              "status": "available"
+              "status": "available",
+              "reservedByUser": false,
           },
           {
               "row": 5,
               "col": 1,
-              "status": "reserved"
+              "status": "reserved",
+              "reservedByUser": false
           },
           {
               "row": 5,
               "col": 2,
-              "status": "available"
+              "status": "available",
+              "reservedByUser": false,
           },
         ],
         [
           {
               "row": 6,
               "col": 0,
-              "status": "available"
+              "status": "available",
+              "reservedByUser": false,
           },
           {
               "row": 6,
               "col": 1,
-              "status": "reserved"
+              "status": "reserved",
+              "reservedByUser": false
           },
         ],
       ],
@@ -613,124 +679,146 @@ const datas = JSON.parse(localStorage.getItem('datas')) ?? {
             {
                 "row": 0,
                 "col": 0,
-                "status": "reserved"
+                "status": "reserved",
+                "reservedByUser": false
             },
             {
                 "row": 0,
                 "col": 1,
-                "status": "available"
+                "status": "available",
+                "reservedByUser": false,
             },
         ],
         [
             {
                 "row": 1,
                 "col": 0,
-                "status": "reserved"
+                "status": "reserved",
+                "reservedByUser": false
             },
             {
                 "row": 1,
                 "col": 1,
-                "status": "available"
+                "status": "available",
+                "reservedByUser": false,
             },
             {
                 "row": 1,
                 "col": 2,
-                "status": "available"
+                "status": "available",
+                "reservedByUser": false,
             },
         ],
         [
             {
                 "row": 2,
                 "col": 0,
-                "status": "reserved"
+                "status": "reserved",
+                "reservedByUser": false
             },
             {
                 "row": 2,
                 "col": 1,
-                "status": "reserved"
+                "status": "reserved",
+                "reservedByUser": false
             },
             {
                 "row": 2,
                 "col": 2,
-                "status": "reserved"
+                "status": "reserved",
+                "reservedByUser": false
             },
             {
                 "row": 2,
                 "col": 3,
-                "status": "reserved"
+                "status": "reserved",
+                "reservedByUser": false
             },
         ],
         [
           {
               "row": 3,
               "col": 0,
-              "status": "available"
+              "status": "available",
+              "reservedByUser": false,
           },
           {
               "row": 3,
               "col": 1,
-              "status": "reserved"
+              "status": "reserved",
+              "reservedByUser": false
           },
           {
               "row": 3,
               "col": 2,
-              "status": "available"
+              "status": "available",
+              "reservedByUser": false,
           },
           {
               "row": 3,
               "col": 3,
-              "status": "reserved"
+              "status": "reserved",
+              "reservedByUser": false
           },
         ],
         [
           {
               "row": 4,
               "col": 0,
-              "status": "reserved"
+              "status": "reserved",
+              "reservedByUser": false
           },
           {
               "row": 4,
               "col": 1,
-              "status": "available"
+              "status": "available",
+              "reservedByUser": false,
           },
           {
               "row": 4,
               "col": 2,
-              "status": "available"
+              "status": "available",
+              "reservedByUser": false,
           },
           {
               "row": 4,
               "col": 3,
-              "status": "available"
+              "status": "available",
+              "reservedByUser": false,
           },
         ],
         [
           {
               "row": 5,
               "col": 0,
-              "status": "reserved"
+              "status": "reserved",
+              "reservedByUser": false
           },
           {
               "row": 5,
               "col": 1,
-              "status": "available"
+              "status": "available",
+              "reservedByUser": false,
           },
           {
               "row": 5,
               "col": 2,
-              "status": "available"
+              "status": "available",
+              "reservedByUser": false,
           },
         ],
         [
           {
               "row": 6,
               "col": 0,
-              "status": "reserved"
+              "status": "reserved",
+              "reservedByUser": false
           },
           {
               "row": 6,
               "col": 1,
-              "status": "available"
+              "status": "available",
+              "reservedByUser": false,
           },
         ],
       ],
@@ -742,8 +830,11 @@ const datas = JSON.parse(localStorage.getItem('datas')) ?? {
         "18:00",
         "21:00"
       ],
-      pricePerSeat: 1200,
+      pricePerSeat: 1000,
     },
+  ],
+  userTickets: [
+    
   ]
 }
 
@@ -760,6 +851,48 @@ export const handleBookmarks = (id, req) => {
     updateLocalStorage('datas', datas)
   }
    
+}
+
+export const handleTickets = (id, positions, date, time, price) => {
+  const specificSchedule = datas.cinemaSchedules.find(schedule => schedule.id === id);
+  
+  let seatsReserved = datas.userTickets.find(tickets => tickets.id === id);
+
+  if (!seatsReserved) {
+    datas.userTickets.push(
+      {
+        id,
+        seats: 
+        [
+          
+        ],
+        date,
+        time,
+        price: 0,
+      }
+    );
+    seatsReserved = datas.userTickets.find(tickets => tickets.id === id);
+  } 
+
+  positions.forEach(position => {
+    const seatPosition = specificSchedule[`${position.seatPosition}Seats`];
+
+    const seat = seatPosition[position.seatRowPosition][position.seatColPosition];
+    seat.status = 'reserved';
+    seat.reservedByUser = true;
+    
+    seatsReserved.seats.push({
+      seatPosition: position.seatPosition,
+      seatRowPosition: position.seatRowPosition, 
+      seatColPosition: position.seatColPosition
+    })
+    seatsReserved.date = date;
+    seatsReserved.time = time;
+  });
+  seatsReserved.price += price;
+  
+  updateLocalStorage('datas', datas);
+
 }
 
 export const updateLocalStorage = (key, data) => {

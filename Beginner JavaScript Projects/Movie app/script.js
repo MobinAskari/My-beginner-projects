@@ -1,4 +1,4 @@
-import datas , { handleBookmarks } from './datas.js'
+import datas , { handleBookmarks, handleTickets} from './datas.js';
 import { toggleTheme } from './UIScripts.js';
 
 const sidebarLiElements = document.querySelector('.sidebar-items-wrapper').querySelectorAll('li');
@@ -278,7 +278,7 @@ function sortByCategories(data, sortCondition) {
 function showMovieBox(moviesData, id) {
   const movie = moviesData.find((movie) => movie.id == id);  
 
-  const boilerPlateHTML = 
+  const boilerplateHTML = 
   `
     <section class="movie-details-box__header">
       <div class="movie-details-box__header_buttons">
@@ -305,7 +305,7 @@ function showMovieBox(moviesData, id) {
   const movieBoxHTML = document.createElement('section');
   movieBoxHTML.classList.add('movie-details-box');
   
-  movieBoxHTML.innerHTML = boilerPlateHTML;
+  movieBoxHTML.innerHTML = boilerplateHTML;
 
   mainContainer.appendChild(movieBoxHTML);
 
@@ -362,12 +362,12 @@ function showMovieBox(moviesData, id) {
   const showReservationCardButton = document.querySelector('.show-reservation-card');
   showReservationCardButton.addEventListener('click', () => {
     mainContainer.removeChild(movieBoxHTML);
-    showMovieReservationDetails(boilerPlateHTML, movie, id);
+    showMovieReservationDetails(movie, id);
   });
  
   // event.preventDefault();
   document.body.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  document.body.classList.add('noScroll')
+  // document.body.classList.add('noScroll')
 
 }
 
@@ -378,9 +378,9 @@ function showBookmarks() {
 
   moviesSection.querySelector('h3').textContent = `Bookmarks | shuffle`;
 
-  showMovies(datas.movies, 'shuffle', true)
+  showMovies(datas.movies, 'shuffle', true);
 
-  showGenres(datas.movies, true)
+  showGenres(datas.movies, true);
 
   const categorySelectors = document.querySelectorAll('.category-selector-button');
 
@@ -389,16 +389,43 @@ function showBookmarks() {
   categorySelectors.forEach(li => {
     li.addEventListener('click', () => {
       moviesSection.querySelector('h3').textContent = `Bookmarks | ${li.querySelector('p').textContent}`;
-    })
-  })
+    });
+  });
 
 }
 
-function showMovieReservationDetails(boilerPlateHTML, movie, id) {
+function showMovieReservationDetails(movie, id) {
   const movieBoxHTML = document.createElement('section');
   movieBoxHTML.classList.add('movie-details-box');
+
+  const savedMovie = movie;
+  const savedId = id;
   
-  movieBoxHTML.innerHTML = boilerPlateHTML;
+  const boilerplateHTML = 
+  `
+    <section class="movie-details-box__header">
+      <div class="movie-details-box__header_buttons">
+        <button class="close-movie-box-button">
+          <span class="material-symbols-sharp">close</span>
+        </button>
+        <button style="pointer-events: none;">
+          <span class="material-symbols-sharp">Schedule</span>
+          <p>${movie.Runtime}</p>
+        </button>
+        <button class="bookmark-movie-button">
+          <span class="material-symbols-sharp">Bookmark</span>
+        </button>
+      </div>
+      <img src="${movie.Poster}" alt="">
+    </section>
+
+
+    <section class="movie-details-box__footer">
+
+    </section>
+  `;
+
+  movieBoxHTML.innerHTML = boilerplateHTML;
 
   mainContainer.appendChild(movieBoxHTML);
 
@@ -430,7 +457,6 @@ function showMovieReservationDetails(boilerPlateHTML, movie, id) {
     </div>
   `;
 
-  
   let specificSchedule = datas.cinemaSchedules.find(schedules => schedules.id === id);
 
   const Response = makeReservationSeatsContainer(specificSchedule);
@@ -453,37 +479,75 @@ function showMovieReservationDetails(boilerPlateHTML, movie, id) {
     <div class="reservation-actions-container">
       <div class="total-price-wrapper">
         <h4>Totalprice:</h4>
-        <p>$</p>
+        <p id="ticket-price-element">$</p>
       </div>
       <div class="buy-wrapper">
-        <button>Buy now</button>
+        <button class="buy-ticket-button">Buy now</button>
       </div>
     </div>
     `;
   }
   
   const reservationDatesWrapper = document.querySelector('.reservation-dates-wrapper');
-
   specificSchedule.dates.forEach(date => {
     reservationDatesWrapper.innerHTML += 
     `
-      <button class="reservation-date">
-        ${date}
-      </button>
+      <button class="reservation-date">${date}</button>
     `;
   });
 
   const reservationTimesWrapper = document.querySelector('.reservation-times-wrapper');
-
   specificSchedule.times.forEach(time => {
     reservationTimesWrapper.innerHTML += 
     `
-      <button class="reservation-time">
-        ${time}
-      </button>
+      <button class="reservation-time">${time}</button>
     `;
   });
 
+  const availableSeats = document.querySelectorAll('.available');
+
+  availableSeats.forEach(availableSeat => {
+    availableSeat.addEventListener('click', () => {
+      availableSeat.classList.toggle('selected');
+      availableSeat.classList.contains('selected') ? calcAndShowPrice(true) : calcAndShowPrice(false)
+    });
+  });
+
+  const ticketPriceElement = document.getElementById('ticket-price-element');
+  let price = 0;
+
+  function calcAndShowPrice (condition) {
+    condition ? price += specificSchedule.pricePerSeat : price -= specificSchedule.pricePerSeat;
+    ticketPriceElement.textContent = `$ ${price / 100}`;
+  }
+
+  classToggleHelper('reservation-date', 'selected');
+  classToggleHelper('reservation-time', 'selected');
+
+  const buyTicketButton = document.querySelector('.buy-ticket-button');
+  buyTicketButton.addEventListener('click', () => {
+    const selectedSeats = document.querySelectorAll('.seat.selected');
+    const positions = [];
+    const selectedDate = document.querySelector('.reservation-date.selected');
+    const selectedTime = document.querySelector('.reservation-time.selected');
+
+    if (selectedDate && selectedTime && selectedSeats.length > 0) {
+      selectedSeats.forEach(selectedSeat => {
+        const seatPosition = selectedSeat.dataset.seatPosition;
+        const seatRowPosition = selectedSeat.dataset.rowPosition;
+        const seatColPosition = selectedSeat.dataset.colPosition;
+        positions.push({seatPosition, seatRowPosition, seatColPosition});
+      });
+      handleTickets(id, positions, selectedDate.textContent, selectedTime.textContent, price);
+      alert('Tickets has been reserved');
+      mainContainer.removeChild(movieBoxHTML);
+      showMovieReservationDetails(savedMovie, savedId);
+    } else {
+      alert('Every option should be choosed at least once!');
+    }
+
+  });
+  
 }
 
 function getRowsAndCols(specificSchedule, seatPosition) {
@@ -503,8 +567,9 @@ function getRowsAndCols(specificSchedule, seatPosition) {
       `
       <button 
       class="seat ${rows[j].status}" 
-      data-seat="${seatPosition}" 
-      data-seat-row="${i}" data-seat-col="${j}">
+      data-seat-position="${seatPosition}" 
+      data-row-position="${i}" 
+      data-col-position="${j}">
       </button>
       `;
     }
@@ -556,7 +621,20 @@ const bookmarkFunc = (movie) => {
 const closeMovieBox = (mainContainer, movieBoxHTML) => {
   document.querySelector('.close-movie-box-button').addEventListener('click', () => {
     mainContainer.removeChild(movieBoxHTML);
-    document.body.classList.remove('noScroll')
+    // document.body.classList.remove('noScroll')
   });
 }
 
+const classToggleHelper = (elementsClassName, className) => {
+  const elements = document.querySelectorAll(`.${elementsClassName}`);
+
+  elements.forEach(element => {
+    element.addEventListener('click', () => {
+      
+      elements.forEach(element => { element.classList.remove(`${className}`)});
+
+      element.classList.toggle(`${className}`);
+    });
+  });
+
+}

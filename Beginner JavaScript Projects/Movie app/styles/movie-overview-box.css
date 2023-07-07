@@ -194,10 +194,14 @@
 .seats-indicator.reserved,
 .seat.reserved {
   background-color: var(--Darker-red);
+  pointer-events: none;
 }
 .seats-indicator.selected,
-.seat.selected {
+.seat.selected,
+.reservation-date.selected,
+.reservation-time.selected {
   background-color: var(--Soft-orange);
+  color: var(--Background-color);
 }
 
 .reservation-dates-container, 
