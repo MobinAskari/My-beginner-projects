@@ -1,0 +1,87 @@
+.footer-container {
+
+}
+
+.nintendo-socials-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: var(--red);
+  color: var(--white);
+}
+
+.logo-image-wrapper {
+  width: 6rem;
+}
+.logo-image-wrapper img {
+
+}
+
+.social-medias-container {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-links-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.footer-uls-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  grid-template-rows: 2fr;
+  gap: 1.5rem;
+}
+
+.ul-container,
+.ul-container ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.ul-container {
+  border-right: 1px solid var(--gray);
+}
+
+.ul-container ul li {
+  color: var(--red);
+}
+
+.footer-esrb-logo-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.footer-esrb-logo-wrapper img {
+  width: 4rem;
+}
+
+.last-footer-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: var(--dark-gray);
+  color: var(--white);
+}
+
+.last-footer-container div {
+  flex: 0.5;
+}
+
+.last-footer-container div,
+.last-footer-container div ul,
+.last-footer-container div ul li {
+  display: flex;
+  align-items: center;
+}
+
+.last-footer-container div ul {
+  width: 100%;
+  gap: 1rem;
+  justify-content: flex-end;
+}

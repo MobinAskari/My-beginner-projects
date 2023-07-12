@@ -1,0 +1,135 @@
+.header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
+  background-color: var(--white);
+}
+
+.tablet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--red);
+  color: var(--white);
+  display: none;
+}
+.tablet-header div {
+  display: flex;
+  gap: .25rem;
+}
+
+.my-nintendo-store .header-lang-wrapper {
+  margin: 0 0.5rem;
+}
+
+.header-top-section,
+.header-top-section_left,
+.header-search-wrapper,
+.header-search-all-categories-wrapper,
+.header-top-section_right, 
+.header-top-section_right ul, 
+.header-top-section_right ul li, 
+.header-top-section_right ul li a ,
+.header-bottom-section,
+.header-bottom-section ul,
+.header-bottom-section ul li,
+.header-bottom-section ul li button {
+  display: flex;
+  align-items: center;
+}
+
+.header-top-section,
+.header-bottom-section {
+  border-bottom: 1px solid var(--gray);
+}
+
+.header-top-section {
+  justify-content: space-between;
+}
+
+.header-top-section_left {
+  gap: .5rem;
+}
+
+.header-nintendo-logo-wrapper {
+  width: 5rem;
+}
+
+.header-search-wrapper {
+  border-bottom: 1px solid var(--dark-gray);
+  height: 1.75rem;
+}
+
+.header-search-wrapper button {
+  display: flex;
+}
+
+.header-search-all-categories-wrapper {
+  cursor: pointer;
+  font-size: .9rem;
+  transition: color 0.2s ease-in-out;
+}
+
+.header-search-all-categories-wrapper:hover {
+  color: var(--red);
+}
+.header-top-section_left:has(.header-search-all-categories-wrapper:hover) .header-search-wrapper {
+  border-color: var(--red);
+}
+
+.header-search-wrapper input {
+  width: 16rem;
+}
+
+.header-top-section_right {
+  padding: 0 .5rem;
+}
+
+.header-top-section_right ul,
+.header-bottom-section ul {
+  gap: .75rem;
+}
+.header-top-section_right ul li a {
+  gap: .25rem;
+  color: var(--dark-gray);
+}
+
+.header-top-section_right li a span {
+  font-size: 1.25rem;
+}
+
+.header-bottom-section {
+  padding-top: .5rem;
+  justify-content: center;
+}
+
+.header-bottom-section ul li button {
+  transition: color 0.2s ease-in-out;
+  position: relative;
+  padding: 0;
+  padding-bottom: .5rem;
+  font-size: 1.15rem;
+  gap: .25rem;
+}
+.header-bottom-section ul li button:hover {
+  color: var(--red);
+}
+
+.header-bottom-section ul li button.active {
+  color: var(--red);
+}
+.header-bottom-section ul li button.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  background-color: var(--red);
+}
+
+.header-bottom-section ul li button span {
+  font-size: 1rem;
+}
