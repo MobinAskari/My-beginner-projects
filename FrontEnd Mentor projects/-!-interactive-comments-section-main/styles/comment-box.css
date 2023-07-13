@@ -1,0 +1,137 @@
+.comment-parent_container {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 1rem;
+  position: relative;
+}
+
+.comment-replies_container {
+  width: 97%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-left: 1.5rem;
+  border-left: 1px solid var(--Light-gray);
+}
+
+.comment-card_container {
+  width: 100%;
+  display: flex;
+  padding: 1rem;
+  border-radius: .25rem;
+  gap: 1rem;
+  background-color: var(--White);
+}
+
+.feedback_container {
+  max-height: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: .25rem;
+  background-color: var(--Very-light-gray);
+}
+
+.feedback_container .feedback-score {
+  color: var(--Moderate-blue);
+  margin-bottom: .25rem;
+}
+
+.feedback_container button {
+  width: 1rem;
+  padding: .25rem;
+}
+
+.comment-contents_container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.comment-contents-header_container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comment-metadata_container,
+.comment-actions_container {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.comment-actions_container {
+  align-items: flex-start;
+}
+
+.profile-picture_wrapper {
+  width: 2rem;
+}
+
+.profile-name_wrapper {
+  font-weight: 500;
+}
+
+.account-indicator_wrapper {
+  display: none;
+}
+.account-indicator_wrapper:has(p) {
+  display: block;
+}
+.account-indicator_wrapper p {
+  display: block;
+  font-size: .9rem;
+  padding: 0 .25rem .25rem 0.25rem;
+  border-radius: .25rem;
+  background-color: var(--Moderate-blue);
+  color: var(--White);
+}
+
+.comment-timestamp_wrapper {
+  color: var(--Grayish-Blue);
+}
+
+.comment-actions_container button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+.reply-button,
+.edit-button {
+  color: var(--Moderate-blue);
+}
+.delete-button {
+  color: var(--Soft-Red);
+}
+
+.comment-text_wrapper {
+  flex: 1;
+  display: flex;
+}
+
+.comment-textarea {
+  resize: none;
+  min-height: 4rem;
+  flex: 1;
+  outline: none;
+  border: 1px solid var(--Light-gray);
+  border-radius: .25rem;
+  padding: 0.5rem 1rem;
+}
+
+.crud-button-style {
+  padding: 0.5rem 1.25rem;
+  max-height: 2rem;
+  background-color: var(--Moderate-blue);
+  color: var(--White);
+  border-radius: .25rem;
+}
