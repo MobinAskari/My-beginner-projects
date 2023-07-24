@@ -1,0 +1,62 @@
+.onboarding {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.modal {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--dark-background);
+}
+
+.modal__image-wrapper {
+  width: 12rem;
+}
+
+.modal__image-text {
+  /* margin-top: auto; */
+  margin: 2rem 0;
+}
+.modal__image-text p,
+.entering p {
+  color: var(--white);
+}
+.modal__image-text p a,
+.entering p a  {
+ color: var(--blue);
+ text-decoration: underline;
+}
+
+.action {
+  width: 85%;
+}
+
+.entering {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+}
+.entering label {
+  color: var(--white);
+}
+.entering input {
+  display: block;
+  background-color: var(--folder-card);
+  padding: .5rem;
+  border-radius: .25rem;
+  color: var(--white);
+  font-family: inherit;
+}
+.entering p {
+  margin-bottom: 0.5rem;
+}
+.entering input[type='checkbox'] {
+  display: inline-block;
+}
