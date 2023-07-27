@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vigenere Cipher app</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js" type="module"></script>
+</head>
+<body>
+  <div class="main-container">
+    <h1>Vigenere cipher</h1>
+    <div class="textarea-con">
+      <div class="txtarea-con__header">
+        <p>Message:</p>
+        <p class="alert messageInputAlert"></p>
+      </div>
+      <textarea id="message"></textarea>
+    </div>
+    <div class="key-con">
+      <p>Key:</p>
+      <div class="key-con__input">
+        <input type="text" placeholder="Key" id="key">
+        <p class="alert keyInputAlert"></p>
+      </div>
+    </div>
+    <div class="buttons-con">
+      <button class="encrypt" id="encrypt">Encrypt</button>
+      <button class="decrypt" id="decrypt">Decrypt</button>
+    </div>
+    <div class="textarea-con">
+      <div class="txtarea-con__header">
+        <p>Result:</p>
+      </div>
+      <textarea id="result"></textarea>
+    </div>  
+  </div>
+</body>
+</html>
