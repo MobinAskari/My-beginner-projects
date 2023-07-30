@@ -1,0 +1,50 @@
+.modal {
+  position: absolute;
+  width: 100%;
+  top: 10%;
+  margin: 0 auto;
+  z-index: 11;
+}
+
+.modal.content-box {
+  gap: 1rem;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: hsla(0, 0%, 0%, 0.288);
+  z-index: 10;
+}
+
+.modal__close-btn {
+  margin-left: auto;
+}
+
+.modal__name-price {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.modal__name-price h3 {
+  transition: color .2s ease-in-out;
+}
+.modal__name-price h3:not(.sold-out h3):hover {
+ color: var(--Moderate-cyan);
+ cursor: pointer;
+}
+.reward:not(.sold-out) .reward__head:hover .checkBtn {
+  border: 1px solid var(--Moderate-cyan);
+}
+
+.modal__reward__description {
+  padding-left: 3rem;
+}
+
+.modal__reward-quantity {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  margin-left: auto;
+}

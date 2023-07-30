@@ -1,0 +1,89 @@
+.clr-gray {
+  color: var(--Dark-gray);
+}
+.clr-green {
+  color: var(--Moderate-cyan);
+}
+.semi-bold {
+  font-weight: 500;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.container {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+
+.content-box {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: .5rem;
+  border: 1px solid  hsla(0, 0%, 48%, 0.103);
+}
+
+.btn-green {
+  padding: 1rem 2.5rem;
+  background-color: var(--Moderate-cyan);
+  color: #fff;
+  border-radius: 2rem;
+  font-size: 1.25rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn-green:hover {
+  background-color: var(--Dark-cyan);
+}
+
+.btn-bookmark {
+  font-size: 1.25rem;
+  background-color: hsla(0, 0%, 48%, 0.151);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-weight: 700;
+  border-radius: 2rem;
+  padding-left: 0;
+  padding-right: 1.25rem;
+  transition: filter 0.2s ease-in-out;
+}
+
+.btn-bookmark:hover {
+  filter: invert(25%);
+}
+
+.btn-bookmark.bookmarked {
+  color: var(--Dark-cyan);
+}
+.btn-bookmark.bookmarked svg circle {
+  fill: var(--Dark-cyan);
+}
+.btn-bookmark.bookmarked svg path {
+  fill: #fff;
+}
+
+.checkBtn {
+  width: 1.75rem;
+  height: 1.75rem;
+  aspect-ratio: 1 / 1;
+  margin: 0 1rem 0 0;
+  border: 1px solid hsla(0, 0%, 48%, 0.507);
+  border-radius: 50%;
+}
+.checkBtn.selected {
+  outline: 0.4rem solid #fff;
+  outline-offset: -0.4rem;
+  background-color: var(--Moderate-cyan);
+}

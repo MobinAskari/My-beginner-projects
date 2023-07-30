@@ -1,0 +1,41 @@
+.hero {
+  width: 100%;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero__image-wrapper,
+.hero__image-wrapper img {
+  width: 100%;
+}
+
+.hero__image-mobile {
+  display: none;
+}
+@media (max-width: 375px) {
+  .hero__image-desktop {
+    display: none;
+  }
+  .hero__image-mobile {
+    display: block;
+  }
+}
+
+.hero .content-box {
+  margin-top: -4rem;
+  align-items: center;
+  z-index: 2;
+}
+
+.hero__content__logo-wrapper {
+  margin-top: -3.5rem;
+}
+
+.hero__content__actions {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

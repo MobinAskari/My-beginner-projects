@@ -1,0 +1,112 @@
+.reward {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border-radius: .25rem;
+  border: 1px solid hsla(0, 0%, 48%, 0.150);
+  cursor: pointer;
+}
+
+.reward.selected {
+  border: 2px solid var(--Moderate-cyan);
+}
+
+.reward.sold-out *:not(h3) {
+  opacity: 0.7;
+}
+.reward.sold-out { pointer-events: none; }
+.reward.sold-out button {
+  pointer-events: none;
+  background-color: var(--Dark-gray);
+}
+
+.reward__head,
+.reward__footer {
+  display: flex;
+  align-items: center;
+}
+.reward__footer {
+  justify-content: space-between;
+}
+
+.reward__footer.selected {
+  padding-top: 1rem;
+  border-top: 1px solid hsla(0, 0%, 48%, 0.150);
+}
+
+.reward__footer-action {
+  display: flex;
+  gap: .5rem;
+}
+.input-wrapper {
+  width: 5.5rem;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  border: 1px solid hsla(0, 0%, 48%, 0.255);
+  border-radius: 4rem;
+}
+.input-wrapper span {
+  color: var(--Dark-gray);
+  font-size: 1.25rem;
+}
+.input-wrapper input {
+  width: 100%;
+  font-weight: 700;
+}
+.input-wrapper input::-webkit-outer-spin-button,
+.input-wrapper input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.reward__footer-action:has(input:focus) .input-wrapper {
+  border: 1px solid var(--Moderate-cyan);
+}
+
+
+.name-price {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.name-price h3 {
+  transition: color .3s ease-in-out;
+}
+.name-price h3:not(.sold-out h3):hover {
+ color: var(--Moderate-cyan);
+ cursor: pointer;
+}
+
+.reward-quantity {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  /* margin-left: auto; */
+}
+
+.reward__footer button {
+  font-size: 1rem;
+  padding: 0.75rem 1.75rem;
+}
+
+/* .checkBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid hsla(0, 0%, 48%, 0.150);
+  border-radius: 50%;
+} */
+
+/* .checkBtn__dot {
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--Moderate-cyan);
+  border-radius: 50%;
+} */

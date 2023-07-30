@@ -1,0 +1,23 @@
+.header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 6rem;
+  color: #ffffff;
+}
+
+/* .header__logo-wrapper { } */
+
+/* .header__nav { } */
+
+.header__nav ul {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.headermenuBtn {
+  display: flex;
+}
