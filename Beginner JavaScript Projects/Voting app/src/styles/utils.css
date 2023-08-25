@@ -1,0 +1,21 @@
+.link-rose {
+  color: var(--rose700);
+  text-decoration: underline;
+}
+
+.hidden { display: none; }
+
+.onboarding__btn {
+  background-color: var(--neutral50);
+  padding: .5rem;
+  border-radius: .25rem;
+  color: var(--slate950);
+  box-shadow: 0 0 12px 2px var(--rose700);
+  transition: box-shadow 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.onboarding__btn:hover {
+  background-color: var(--slate950);
+  color: var(--neutral50);
+  box-shadow: 0 0 8px 1px var(--rose800);
+}

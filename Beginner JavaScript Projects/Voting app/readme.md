@@ -1,0 +1,1 @@
+you need install vite with typescript

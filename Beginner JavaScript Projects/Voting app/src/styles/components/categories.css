@@ -1,0 +1,12 @@
+.categories-container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.category-btn {
+  padding: .5rem 1rem;
+  border-radius: 4rem;
+  background-color: var(--slate950);
+  color: var(--gray200);
+}

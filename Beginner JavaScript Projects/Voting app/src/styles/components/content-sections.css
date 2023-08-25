@@ -1,0 +1,29 @@
+.content-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: .25rem;
+}
+
+.content-section__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--neutral50);
+}
+
+.content-section__top-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.section-link {
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+  text-decoration-color: var(--gray400);
+}
+
+.content-section__top button {
+  display: flex;
+  align-items: center;
+}
