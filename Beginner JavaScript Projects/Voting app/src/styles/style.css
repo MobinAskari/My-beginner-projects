@@ -42,13 +42,34 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-p, h1, h2, h3, h4, h5, h6 { margin: 0; }
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
 
-a { color: inherit; text-decoration: none; }
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
-button { border: none; outline: none; font-family: inherit; cursor: pointer; color: inherit; background-color: transparent; }
+button {
+  border: none;
+  outline: none;
+  font-family: inherit;
+  cursor: pointer;
+  color: inherit;
+  background-color: transparent;
+}
 
-img { display: block; max-width: 100%; }
+img {
+  display: block;
+  max-width: 100%;
+}
 
 ::-webkit-scrollbar {
   width: 8px;
@@ -61,4 +82,3 @@ img { display: block; max-width: 100%; }
 ::-webkit-scrollbar-thumb {
   background-color: var(--gray200);
 }
-

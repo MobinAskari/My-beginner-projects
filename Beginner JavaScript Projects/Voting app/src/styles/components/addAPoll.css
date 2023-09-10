@@ -1,0 +1,137 @@
+.add-sections-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(1fr, 1fr));
+  place-content: center;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+.add-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  padding: .75rem;
+  border: 1px solid var(--rose800);
+  border-radius: .5rem;
+}
+
+.add-section-input-label {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.add-section input {
+  padding: .5rem 0;
+  border: none;
+  border-bottom: 1px solid;
+  border-bottom-color: var(--neutral50);
+  outline: none;
+  background: none;
+  color: var(--neutral50);
+  transition: border-color 0.2s;
+}
+
+.add-section input:focus {
+  border-color: var(--rose800);
+}
+
+.add-slots-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: .5rem;
+}
+
+.slot-element {
+  position: relative;
+}
+
+.slot-element input {
+  font-size: .9rem;
+  max-width: 7rem;
+  border-radius: 0.25rem;
+  padding: 0.5rem 0.25rem;
+  border: 1px solid;
+  border-color: var(--slate950);
+  color: var(--neutral50);
+  background-color: var(--neutral50-lo);
+}
+
+.slot-element input:focus {
+  border: 1px solid var(--rose800);
+}
+
+.delete-slot-element-btn {
+  display: flex;
+  place-items: center;
+  padding: 0;
+  border-radius: 50%;
+  position: absolute;
+  top: -.75rem;
+  right: -0.75rem;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  pointer-events: none;
+}
+
+.slot-element:not(:first-child):hover .delete-slot-element-btn {
+  pointer-events: visible;
+  opacity: 1;
+}
+
+.add-slot-element-btn {
+  max-width: 2.15rem;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--neutral50);
+  background-color: var(--neutral50-lo);
+  transition: background-color 0.2s;
+}
+
+.add-slot-element-btn:hover {
+  background-color: var(--gray400);
+}
+
+.always-open-checkbox {
+  display: none;
+}
+
+.always-open-checkbox-label {
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--neutral50);
+  border-radius: .25rem;
+  margin-left: 0.25rem;
+}
+
+.text-label {
+  position: absolute;
+  left: 2.75rem;
+  user-select: none;
+}
+
+.poll-close-date-input {
+  max-width: 14rem;
+}
+
+.poll-close-date-input::-webkit-calendar-picker-indicator {
+  filter: invert(50%);
+}
+
+.add-section:has(.always-open-checkbox:checked) .always-open-checkbox-label {
+  background-color: var(--rose800);
+}
+
+.add-section:has(.always-open-checkbox:checked) .poll-close-date-input {
+  display: none;
+}
+
+.alertElement {
+  padding: 0 1rem;
+}

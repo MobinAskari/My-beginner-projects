@@ -1,139 +1,225 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Voting app</title>
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
-    
-    <script defer type="module" src="/src/scripts/main.ts"></script>
-  </head>
-  <body>
-    <!--  
-    <header class="header">
-      <div class="header__logo">
-        <h2>Voting <span>App</span></h2>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voting app</title>
 
-      <div class="header__search">
-        <div class="header__search-wrapper">
-          <button>
-            <svg width="1.5rem" height="1.5rem">
-              <use href="/icons.svg#icon_search">
-            </svg>
-          </button>
-          <input type="text" placeholder="Search polls...">
-        </div>
-      </div>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
 
-      <div class="header__profile">
-        <div class="header__profile-picture">
-          <img src="/pfps/profile-2.jpg" alt="">
-          <svg width="1.75rem" height="1.75rem">
-            <use href="/icons.svg#icon_userNoPfp">
-          </svg>
-        </div>
-      </div>
-    </header>
-    
-    <main class="container votingPage">
-      <div class="poll-metadatas">
-        <div class="poll-metadata">
-          <svg width="1.75rem" height="1.75rem">
-            <use href="/icons.svg#icon_group">
-          </svg>
-          <p>14 Voters</p>
-        </div>
-        <div class="poll-metadata">
-          <svg width="1.75rem" height="1.75rem">
-            <use href="/icons.svg#icon_group">
-          </svg>
-          <p>14 Voters</p>
-        </div>
-      </div>
-      <div class="poll-title">
-        <h1>Which phone is better for gaming?</h1>
-      </div>
-      <div class="poll-options">
-        <div class="poll-option">
-          <div class="poll-progress">
-            <p class="poll-percentage">50%</p>
-            <p class="poll-option-name">Apple</p>
-          </div>
-        </div>
-        <div class="poll-option">
-          <div class="poll-progress">
-            <p class="poll-percentage">50%</p>
-            <p class="poll-option-name">Apple</p>
-          </div>
-        </div>
-        <div class="poll-option selected">
-          <div class="poll-progress">
-            <p class="poll-percentage">50%</p>
-            <p class="poll-option-name">Apple</p>
-            <span class="material-symbols-rounded">check</span>
-          </div>
-        </div>
-        <div class="poll-option">
-          <div class="poll-progress">
-            <p class="poll-percentage">50%</p>
-            <p class="poll-option-name">Apple</p>
-          </div>
-        </div>
-      </div>
-      <div class="poll-owner-actions">
+  <script defer type="module" src="/src/scripts/main.ts"></script>
+</head>
+
+<body>
+  <!--  
+  <header class="header">
+    <div class="header__logo">
+      <h2>Voting <span>App</span></h2>
+    </div>
+
+    <div class="header__search">
+      <div class="header__search-wrapper">
         <button>
-          <span class="material-symbols-rounded">arrow_back</span>
-          <p>Retract Vote</p>
+          <svg width="1.5rem" height="1.5rem">
+            <use href="/icons.svg#icon_search">
+          </svg>
         </button>
+        <input type="text" placeholder="Search polls...">
       </div>
-      <div class="poll-owner">
+    </div>
+
+    <div class="header__profile">
+      <div class="header__profile-picture">
         <img src="/pfps/profile-2.jpg" alt="">
-        <p>Mehdi</p>
+        <svg width="1.75rem" height="1.75rem">
+          <use href="/icons.svg#icon_userNoPfp">
+        </svg>
       </div>
-      <div class="poll-categories">
-        <button class="poll-category green">Company</button>
-        <button class="poll-category blue">Fun</button>
+    </div>
+  </header>
+  -->
+  <!-- 
+  <main class="container addPoll">
+    <h1>Create a poll</h1>
+    <div class="add-sections-container">
+      <div class="add-section">
+        <label for="pollName" class="add-section-input-label">
+          <svg width="1.5rem" height="1.5rem">
+            <use href="/icons.svg#icon_title"></use>
+          </svg>
+          <p>Write a title for your poll</p>
+        </label>
+        <input type="text" id="pollName" placeholder="Poll title">
       </div>
-      <div class="poll-actions">
-        <div class="poll-copy-wrapper">
-          <div class="poll-id">#43534</div>
-          <button class="poll-copy-btn">
-            <p>Copy</p>
-            <span class="material-symbols-rounded">note</span>
-          </button>
-        </div>
-      </div>
-    </main>
-    
-    <aside class="sidebar">
-      <nav>
-        <ul>
-          <li>
-            <svg width="1.75rem" height="1.75rem">
-              <use href="/icons.svg#icon_home">
-            </svg>
-            <p>Home</p>
-          </li>
-          <li>
-            <svg width="1.75rem" height="1.75rem">
-              <use href="/icons.svg#icon_categories">
-            </svg>
-            <p>Categories</p>
-          </li>
-          <li>
-            <button class="sidebar-add-btn">
+      <div class="add-section">
+        <label for="first-category-slot-element" class="add-section-input-label">
+          <svg width="1.5rem" height="1.5rem">
+            <use href="/icons.svg#icon_categories"></use>
+          </svg>
+          <p>Write at least one category</p>
+        </label>
+        <div class="add-slots-container">
+          <div class="slot-element">
+            <button class="delete-slot-element-btn">
               <svg width="1.5rem" height="1.5rem">
-                <use href="/icons.svg#icon_add">
+                <use href="/icons.svg#icon_close"></use>
               </svg>
             </button>
-          </li>
-        </ul>
-      </nav>
-    </aside>
-    -->
-    <!--  
+            <input type="text" id="first-category-slot-element">
+          </div>
+          <button class="add-slot-element-btn">
+            <svg width="1.5rem" height="1.5rem">
+              <use href="/icons.svg#icon_add"></use>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+      <div class="add-section">
+        <label for="first-add-option-element" class="add-section-input-label">
+          <svg width="1.5rem" height="1.5rem">
+            <use href="/icons.svg#icon_options"></use>
+          </svg>
+          <p>Write at least two choices</p>
+        </label>
+        <div class="add-slots-container">
+          <div class="slot-element">
+            <input type="text" id="first-add-option-element">
+          </div>
+          <div class="slot-element">
+            <button class="delete-slot-element-btn">
+              <svg width="1.5rem" height="1.5rem">
+                <use href="/icons.svg#icon_close"></use>
+              </svg>
+            </button>
+            <input type="text">
+          </div>
+          <button class="add-slot-element-btn">
+            <svg width="1.5rem" height="1.5rem">
+              <use href="/icons.svg#icon_add"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="add-section">
+        <label for="always-open-checkbox" class="add-section-input-label">
+          <svg width="1.5rem" height="1.5rem">
+            <use href="/icons.svg#icon_calendar"></use>
+          </svg>
+          <p>Select always open or set a closing date for the poll</p>
+        </label>
+        <div class="add-slots-container">
+          <input type="checkbox" id="always-open-checkbox" class="always-open-checkbox" checked="true">
+          <label for="always-open-checkbox" class="always-open-checkbox-label"></label>
+          <label for="always-open-checkbox" class="text-label">Always open</label>
+        </div>
+        <input type="datetime-local" class="poll-close-date-input">
+      </div>
+    </div>
+    <button class="form__submit-btn">Create poll</button>
+  </main>
+  -->
+  <!--  
+  <main class="container votingPage">
+    <div class="poll-metadatas">
+      <div class="poll-metadata">
+        <svg width="1.75rem" height="1.75rem">
+          <use href="/icons.svg#icon_group">
+        </svg>
+        <p>14 Voters</p>
+      </div>
+      <div class="poll-metadata">
+        <svg width="1.75rem" height="1.75rem">
+          <use href="/icons.svg#icon_group">
+        </svg>
+        <p>14 Voters</p>
+      </div>
+    </div>
+    <div class="poll-title">
+      <h1>Which phone is better for gaming?</h1>
+    </div>
+    <div class="poll-options">
+      <div class="poll-option">
+        <div class="poll-progress">
+          <p class="poll-percentage">50%</p>
+          <p class="poll-option-name">Apple</p>
+        </div>
+      </div>
+      <div class="poll-option">
+        <div class="poll-progress">
+          <p class="poll-percentage">50%</p>
+          <p class="poll-option-name">Apple</p>
+        </div>
+      </div>
+      <div class="poll-option selected">
+        <div class="poll-progress">
+          <p class="poll-percentage">50%</p>
+          <p class="poll-option-name">Apple</p>
+          <span class="material-symbols-rounded">check</span>
+        </div>
+      </div>
+      <div class="poll-option">
+        <div class="poll-progress">
+          <p class="poll-percentage">50%</p>
+          <p class="poll-option-name">Apple</p>
+        </div>
+      </div>
+    </div>
+    <div class="poll-owner-actions">
+      <button>
+        <span class="material-symbols-rounded">arrow_back</span>
+        <p>Retract Vote</p>
+      </button>
+    </div>
+    <div class="poll-owner">
+      <img src="/pfps/profile-2.jpg" alt="">
+      <p>Mehdi</p>
+    </div>
+    <div class="poll-categories">
+      <button class="poll-category green">Company</button>
+      <button class="poll-category blue">Fun</button>
+    </div>
+    <div class="poll-actions">
+      <div class="poll-copy-wrapper">
+        <div class="poll-id">#43534</div>
+        <button class="poll-copy-btn">
+          <p>Copy</p>
+          <span class="material-symbols-rounded">note</span>
+        </button>
+      </div>
+    </div>
+  </main>
+  -->
+  <!--  
+  <aside class="sidebar">
+    <nav>
+      <ul>
+        <li>
+          <svg width="1.75rem" height="1.75rem">
+            <use href="/icons.svg#icon_home">
+          </svg>
+          <p>Home</p>
+        </li>
+        <li>
+          <svg width="1.75rem" height="1.75rem">
+            <use href="/icons.svg#icon_categories">
+          </svg>
+          <p>Categories</p>
+        </li>
+        <li>
+          <button class="sidebar-add-btn">
+            <svg width="1.5rem" height="1.5rem">
+              <use href="/icons.svg#icon_add">
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+  -->
+  <!--  
     <main class="container content">
       <section class="content-section">
         <div class="content-section__top">
@@ -241,8 +327,8 @@
         </div>
       </section>
     </main>
-    -->    
-    <!--  
+    -->
+  <!--  
     <main class="container enteringCon">
       <section class="entering__left">
         <h1>Login</h1>
@@ -293,7 +379,7 @@
       </div>
     </main>
     -->
-    <!--  
+  <!--  
     <div class="container">
       <section class="onboarding">
         <div class="onboarding__img">
@@ -333,6 +419,7 @@
         </ul>
       </nav>
     </div>
-    --> 
-  </body>
+    -->
+</body>
+
 </html>

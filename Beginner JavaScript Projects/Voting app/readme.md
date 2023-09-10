@@ -1,1 +1,1 @@
-you need install vite with typescript
+you need to install vite with typescript

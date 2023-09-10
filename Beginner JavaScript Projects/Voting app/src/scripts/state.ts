@@ -5,6 +5,7 @@ import { SSKey_CurrentUser } from "./datas/datas.ts";
 import { setCookie } from "./datas/cookies.ts";
 import { showSignupPage } from "./components/signuppage.ts";
 import { showLoginPage } from "./components/loginpage.ts";
+import { showVotingPage } from "./components/votingpage.ts";
 
 type State = {
   hasVisited: boolean,
@@ -32,20 +33,28 @@ export const manageState = (): void => {
   state.hasVisited = (() => {
     try {
       const hasVisited = Boolean(document.cookie.split(';')[0].split('=')[1]);
-  
+
       if (hasVisited) return true;
       else return false;
     } catch (error) {
       alert(error);
-      return false;      
+      return false;
     }
   })();
-  
-  if (state.isUserLoggedIn) showMainPage(); 
+
+
+  if (state.isUserLoggedIn) {
+    const url = new URL(window.location.href);
+    const params = new URLSearchParams(url.search);
+    const pollId = params.get('pollId');
+
+    if (pollId) showVotingPage(Number(pollId));
+    else showMainPage();
+  }
   if (!state.isUserLoggedIn) {
     if (state.hasVisited) showLoginPage();
     else showSignupPage();
-  } 
-    
+  }
+
   setCookie('hasVisited', true, 7);
 }

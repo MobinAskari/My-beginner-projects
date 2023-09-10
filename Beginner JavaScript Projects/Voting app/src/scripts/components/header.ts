@@ -1,4 +1,29 @@
-export const addHeader = (profilePic: string) => {
+import {
+  users,
+  SSKey_CurrentUser
+} from "../datas/datas.ts";
+import { pullSessionStorage } from "../datas/sessionStorage.ts";
+import { showLoginPage } from "./loginpage.ts";
+
+export const addHeader = () => {
+  const user = (() => {
+    let userId: number;
+
+    const pullResult = pullSessionStorage(SSKey_CurrentUser);
+
+    if (pullResult.status === 200) {
+      userId = pullResult.data.id;
+    }
+
+    return users.find(user => user.id === userId);
+  })();
+
+  if (!user) {
+    alert("You're not authorized");
+    showLoginPage();
+    return;
+  }
+
   const body = document.body;
   let header = document.querySelector('header');
 
@@ -24,13 +49,13 @@ export const addHeader = (profilePic: string) => {
 
       <div class="header__profile">
         <div class="header__profile-picture">
-          ${profilePic !== '' ? 
-            `<img src="${profilePic}" alt="">` 
-            : 
-            `<svg width="1.75rem" height="1.75rem">
+          ${user.profilePicture !== '' ?
+        `<img src="${user.profilePicture}" alt="">`
+        :
+        `<svg width="1.75rem" height="1.75rem">
               <use href="/icons.svg#icon_userNoPfp">
             </svg>`
-          }
+      }
         </div>
       </div>
     `;

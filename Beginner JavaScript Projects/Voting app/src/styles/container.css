@@ -5,6 +5,29 @@
   overflow-y: auto;
 }
 
+.container.notFound {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  background-color: var(--slate950);
+  color: var(--neutral50);
+  text-align: center;
+}
+
+.container.addPoll {
+  margin-top: var(--header-height);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  overflow-y: auto;
+  padding: 0 0 1rem 0;
+  background-color: var(--slate950);
+  color: var(--neutral50);
+}
+
 .container.onboardingCon,
 .container.enteringCon {
   background-color: var(--slate950);
@@ -36,6 +59,7 @@
 }
 
 @media screen and (max-width: 768px) {
+
   .container.content,
   .container.votingPage {
     margin-left: 0;
