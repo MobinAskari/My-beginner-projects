@@ -10,6 +10,8 @@ import '../styles/components/categories.css';
 import '../styles/components/polls.css';
 import '../styles/components/404page.css';
 import '../styles/components/addAPoll.css';
+import '../styles/components/user-menu.css';
+import '../styles/components/theme-toggle.css';
 import '../styles/style.css';
 import '../styles/moden-normalize.css';
 import '../styles/utils.css';

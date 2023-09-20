@@ -3,12 +3,16 @@ import { getBackground } from "./getBackground.ts";
 import { showSignupPage } from "./signuppage.ts";
 import { validateInput } from "../datas/validateInput.ts";
 import { loginUser } from "../datas/login.ts";
-import { showMainPage } from "./mainpage.ts";
+import { showHomePage } from "./homepage.ts";
+import { urlSetter } from "../router/urlSetter.ts";
+import { manageState } from "../state.ts";
 
 export const showLoginPage = (): void => {
   document.body.innerHTML = ``;
   const container = generateContainer();
   container.classList.add('enteringCon');
+
+  urlSetter('login')
 
   container.innerHTML = `
     <section class="entering__left">
@@ -42,7 +46,7 @@ export const showLoginPage = (): void => {
 
       <p>Forgot your password? <a href="#" class="link-rose" data-show-resetpassword>Reset password</a></p>
       
-      <p>Don't have an account? <a href="#" class="link-rose" data-show-signup>Sign up</a></p>
+      <p>Don't have an account? <a href="" class="link-rose" data-show-signup>Sign up</a></p>
 
       <p class="resultMessage hidden">Invalid username or email</p>
 
@@ -55,10 +59,10 @@ export const showLoginPage = (): void => {
       </div>        
     </section>
   `;
-  
+
   handleAnchorClicks();
   handleForm();
-  
+
   container.append(getBackground());
 }
 
@@ -76,13 +80,16 @@ const handleForm = () => {
     // Checks to see if every validation return is true
     const status = [
       validateInput(identifier, allAlertElements[0]), validateInput(password, allAlertElements[1])
-    ].every(stat => stat); 
-      
+    ].every(stat => stat);
+
     if (status) {
       const result = loginUser(identifier, password, stayLoggedIn);
 
       handleResultMessage(result);
-      if (result.status) setTimeout(showMainPage, 1000);
+      if (result.status) setTimeout(() => {
+        manageState();
+        showHomePage();
+      }, 1000);
     }
   });
 
@@ -91,10 +98,10 @@ const handleForm = () => {
 const handleResultMessage = (result: {
   status: boolean;
   message: string;
-} ) => {
+}) => {
   const resultMessageElement = document.querySelector('.resultMessage') as HTMLParagraphElement;
   resultMessageElement.classList.remove('hidden');
-  if (result.status) resultMessageElement.style.color = 'var(--green800)'; 
+  if (result.status) resultMessageElement.style.color = 'var(--green800)';
   else resultMessageElement.style.color = 'var(--rose700)';
   resultMessageElement.textContent = result.message;
 }
@@ -107,6 +114,9 @@ const handleAnchorClicks = () => {
 
   const showSignupAnchor = document.querySelector('[data-show-signup]');
 
-  showSignupAnchor?.addEventListener('click', showSignupPage);
+  showSignupAnchor?.addEventListener('click', (event) => {
+    event.preventDefault();
+    showSignupPage()
+  });
 
 }

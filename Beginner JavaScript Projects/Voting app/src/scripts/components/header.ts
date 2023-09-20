@@ -4,6 +4,8 @@ import {
 } from "../datas/datas.ts";
 import { pullSessionStorage } from "../datas/sessionStorage.ts";
 import { showLoginPage } from "./loginpage.ts";
+import { getHeaderMenu } from "./user-menu.ts";
+
 
 export const addHeader = () => {
   const user = (() => {
@@ -26,6 +28,15 @@ export const addHeader = () => {
 
   const body = document.body;
   let header = document.querySelector('header');
+  const profilePicture =
+    user.profilePicture !== '' ?
+      `<img src="${user.profilePicture}" alt="">`
+      :
+      `
+      <svg width="1.75rem" height="1.75rem">
+        <use href="/icons.svg#icon_userNoPfp">
+      </svg>
+      `;
 
   if (!header) {
     header = document.createElement('header');
@@ -49,17 +60,25 @@ export const addHeader = () => {
 
       <div class="header__profile">
         <div class="header__profile-picture">
-          ${user.profilePicture !== '' ?
-        `<img src="${user.profilePicture}" alt="">`
-        :
-        `<svg width="1.75rem" height="1.75rem">
-              <use href="/icons.svg#icon_userNoPfp">
-            </svg>`
-      }
+        ${profilePicture}
         </div>
       </div>
     `;
 
     body.appendChild(header);
+    menuVisibilityHandler();
   }
+}
+
+const menuVisibilityHandler = () => {
+  const header = document.querySelector('header') as HTMLDivElement;
+
+  const headerProfileDiv = header.querySelector('.header__profile') as HTMLDivElement;
+  headerProfileDiv.appendChild(getHeaderMenu())
+
+  const headerProfilePic = header.querySelector('.header__profile-picture') as HTMLDivElement
+
+  const headerUserMenu = header.querySelector('.header__user-menu') as HTMLDivElement;
+
+  headerProfilePic.addEventListener('click', () => headerUserMenu.classList.toggle('shown'));
 }

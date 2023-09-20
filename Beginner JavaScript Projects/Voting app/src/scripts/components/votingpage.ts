@@ -15,10 +15,11 @@ import {
 import { generateContainer } from "./generateContainer.ts";
 import { pullSessionStorage } from "../datas/sessionStorage.ts";
 import { pushToLocalStorage } from "../datas/localStorage.ts";
-import { showMainPage } from "./mainpage.ts";
+import { showHomePage } from "./homepage.ts";
 import { addHeader } from "./header.ts";
 import { addSidebar } from "./sidebar.ts";
 import { show404Page } from "./404page.ts";
+import { urlSetter } from "../router/urlSetter.ts";
 
 export const showVotingPage = (pollId: number) => {
   const body = document.body;
@@ -35,7 +36,9 @@ export const showVotingPage = (pollId: number) => {
     return;
   }
 
-  window.history.replaceState({}, document.title, `/?pollId${poll.id}`);
+  const pollUrlAddress = `${window.location.host}/voting-page?pollId=${(poll.id).toString()}`;
+
+  urlSetter(`/voting-page?pollId=${poll.id}`);
 
   // find ownerName, ownerPfp, currentUser
   let ownerName, ownerPfp, currentUser: User;
@@ -92,7 +95,7 @@ export const showVotingPage = (pollId: number) => {
     </div>
     <div class="poll-actions">
       <div class="poll-copy-wrapper">
-        <p class="poll-id">${window.location.host}/?pollId=${(poll.id).toString()}</p>
+        <p class="poll-id">${pollUrlAddress}</p>
         <button class="poll-copy-btn">
           <p>Copy</p>
           <svg width="1.5rem" height="1.5rem">
@@ -289,11 +292,11 @@ export const showVotingPage = (pollId: number) => {
     ".back-btn"
   ) as HTMLButtonElement;
 
-  backToMainPageBtn.addEventListener("click", showMainPage);
+  backToMainPageBtn.addEventListener("click", showHomePage);
 
   const pollIdBtn = document.querySelector(".poll-copy-btn") as HTMLButtonElement;
 
-  pollIdBtn.addEventListener("click", () => navigator.clipboard.writeText(`${window.location.origin}/?pollId=${(poll.id).toString()}`));
+  pollIdBtn.addEventListener("click", () => navigator.clipboard.writeText(pollUrlAddress));
 
   body.append(container);
 };

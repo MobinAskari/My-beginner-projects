@@ -1,0 +1,23 @@
+.theme-switcher-wrapper {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  border-radius: .5rem;
+  background-color: var(--gray400);
+}
+
+.app-theme-icon-wrapper {
+  display: flex;
+  align-items: center;
+  border-radius: .5rem;
+  padding: .15rem;
+  transition: background-color 0.2s;
+}
+
+.app-theme-icon-wrapper svg {
+  color: var(--slate950);
+}
+
+.app-theme-icon-wrapper.active {
+  background-color: var(--rose700);
+}

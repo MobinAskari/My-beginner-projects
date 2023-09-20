@@ -1,10 +1,13 @@
+import { urlSetter } from "../router/urlSetter.ts";
 import { generateContainer } from "./generateContainer.ts";
-import { showMainPage } from "./mainpage.ts";
+import { showHomePage } from "./homepage.ts";
 
 export const show404Page = () => {
   const body = document.body;
   const container = generateContainer();
   container.classList.add('notFound');
+
+  urlSetter("404");
 
   body.innerHTML = ``;
 
@@ -22,5 +25,5 @@ export const show404Page = () => {
 
   const backBtn = document.querySelector(".back-to-main-btn");
 
-  backBtn?.addEventListener('click', showMainPage);
+  backBtn?.addEventListener('click', showHomePage);
 }

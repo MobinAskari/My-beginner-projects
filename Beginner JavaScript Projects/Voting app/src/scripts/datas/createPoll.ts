@@ -1,6 +1,8 @@
-import { LSKey_PollsArr, Poll, polls } from "./datas";
+import { LSKey_PollsArr, SSKey_CurrentUser, type Poll, polls, users, LSKey_UsersArr } from "./datas";
+import { pullSessionStorage } from "./sessionStorage";
 import { pushToLocalStorage } from "./localStorage";
-
+import { showLoginPage } from "../components/loginpage";
+import { } from "./datas";
 // export class PollObject {
 //   constructor(
 //     public id: number,
@@ -37,10 +39,28 @@ export const createAndAddPollObject = (
     return colors[Math.floor(Math.random() * colors.length)];
   }
 
-  const pollId = polls[polls.length - 1]?.id + 1 ?? 1;
+  const user = (() => {
+    let userId: number;
+
+    const pullResult = pullSessionStorage(SSKey_CurrentUser);
+
+    if (pullResult.status === 200) {
+      userId = pullResult.data.id;
+    }
+
+    return users.find(user => user.id === userId);
+  })();
+
+  if (!user) {
+    alert("You're not authorized");
+    showLoginPage();
+    return;
+  }
+
+  const generatedPollId = polls[polls.length - 1]?.id + 1 ?? 1;
 
   const pollObj: Poll = {
-    id: pollId,
+    id: generatedPollId,
     title: title,
     pollCategories: [],
     ownerId: ownerId,
@@ -65,9 +85,11 @@ export const createAndAddPollObject = (
     });
   });
 
-  polls.push(pollObj);
+  user.createdPollsIds.push(generatedPollId);
 
+  polls.push(pollObj);
   pushToLocalStorage(LSKey_PollsArr, polls);
+  pushToLocalStorage(LSKey_UsersArr, users);
 
   return true;
 

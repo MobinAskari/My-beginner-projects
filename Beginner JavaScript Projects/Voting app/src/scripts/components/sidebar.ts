@@ -1,5 +1,5 @@
-import { showAddPollPage } from "./addPollPage";
-import { showMainPage } from "./mainpage";
+import { showAddPollPage } from "./createPollPage.ts";
+import { showHomePage } from "./homepage.ts";
 
 export const addSidebar = () => {
   const body = document.body;
@@ -39,7 +39,7 @@ export const addSidebar = () => {
   }
 
   const routes: any = {
-    mainpage: () => showMainPage(),
+    mainpage: () => showHomePage(),
     addPollPage: () => showAddPollPage()
   }
 

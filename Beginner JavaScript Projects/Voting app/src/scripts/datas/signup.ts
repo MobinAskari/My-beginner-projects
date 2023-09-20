@@ -17,12 +17,12 @@ export const signupUser = (
 ) => {
 
   if (password !== passwordReenter) return { status: false, message: "password and the password reenter doesn't match" };
-  
+
   const checkForIdenticalUser = users.map(user => {
     if (user.username === username) return { status: true, message: "this username has already been taken" }
-    
+
     if (user.email === email) return { status: true, message: "this email has already been taken" }
-    
+
     return { status: false, message: "" }
   })[0];
 
@@ -49,28 +49,29 @@ export const signupUser = (
       },
       profilePicture: '',
       voted: [],
+      createdPollsIds: [],
       notifications: [],
       enteringMetadata: {
         accountCreatedAt: new Date().toISOString(),
         loginsDate: []
       },
       settings: {
-        theme: 'darkMode',
+        theme: 'dark-mode',
         stayLoggedIn: false
       },
       socialMedias: {
-        facebook: null, 
+        facebook: null,
         twitter: null,
         instagram: null,
         youtube: null,
         telegram: null
-      } 
+      }
     }
-    
+
     users.push(user);
     pushToLocalStorage(LSKey_UsersArr, users);
     pushToSessionStorage(SSKey_CurrentUser, { id: user.id });
-    
+
     return {
       status: true,
       message: "Your account was succesfully created"
@@ -80,5 +81,5 @@ export const signupUser = (
       status: false,
       message: `There was a problem signing you up, please try again later`
     };
-  }    
+  }
 }

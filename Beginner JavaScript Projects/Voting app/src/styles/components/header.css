@@ -40,7 +40,9 @@
 }
 
 .header__profile {
+  position: relative;
   gap: .5rem;
+  cursor: pointer;
 }
 
 .header__profile svg {
@@ -48,6 +50,8 @@
 }
 
 .header__profile-picture {
+  width: 40px;
+  height: 40px;
   justify-content: center;
 }
 
@@ -80,13 +84,26 @@
 }
 
 @media (min-width: 500px) {
-  .header__search { flex: 0.75; }
+  .header__search {
+    flex: 0.75;
+  }
+
   .header__search-wrapper,
-  .header__search-wrapper input { flex: 1; }
+  .header__search-wrapper input {
+    flex: 1;
+  }
 }
 
 @media (max-width: 500px) {
-  .header__search { max-width: 10rem; }
-  .header__logo { display: none; }
-  .header__search-wrapper input { max-width: 10rem; }
+  .header__search {
+    max-width: 10rem;
+  }
+
+  .header__logo {
+    display: none;
+  }
+
+  .header__search-wrapper input {
+    max-width: 10rem;
+  }
 }

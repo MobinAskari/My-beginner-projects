@@ -65,6 +65,7 @@ export type User = {
   password: string,
   profilePicture: string,
   voted: voted[],
+  createdPollsIds: number[],
   notifications: [],
   userMetadata: UserMetadata,
   enteringMetadata: EnteringMetadata,
@@ -96,8 +97,8 @@ export let users: User[] =
         "bio": ""
       },
       "profilePicture": "/pfps/profile-2.jpg",
-      "voted": [
-      ],
+      "voted": [],
+      "createdPollsIds": [1],
       "notifications": [],
       "enteringMetadata": {
         "accountCreatedAt": "2023-08-15T10:05:21.736Z",
@@ -106,7 +107,7 @@ export let users: User[] =
         ]
       },
       "settings": {
-        "theme": "darkMode",
+        "theme": "dark-mode",
         "stayLoggedIn": false
       },
       "socialMedias": {

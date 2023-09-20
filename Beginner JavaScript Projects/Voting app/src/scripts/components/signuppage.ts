@@ -3,12 +3,16 @@ import { getBackground } from "./getBackground.ts";
 import { showLoginPage } from "./loginpage.ts";
 import { validateInput } from "../datas/validateInput.ts";
 import { signupUser } from "../datas/signup.ts";
-import { showMainPage } from "./mainpage.ts";
+import { showHomePage } from "./homepage.ts";
+import { urlSetter } from "../router/urlSetter.ts";
+import { manageState } from "../state.ts";
 
 export const showSignupPage = (): void => {
   document.body.innerHTML = ``;
   const container = generateContainer();
   container.classList.add('enteringCon');
+
+  urlSetter('signup')
 
   container.innerHTML = `
     <section class="entering__left">
@@ -97,18 +101,18 @@ export const showSignupPage = (): void => {
       </div>        
     </section>
   `;
-  
+
   handleAnchorClicks();
   handleForm();
-  
+
   container.append(getBackground());
 }
 
 const handleForm = () => {
   const form = document.querySelector('form') as HTMLFormElement;
   const allInputs = [...document.querySelectorAll('input')];
-  const genderSelect = document.getElementById('genderSelect') as HTMLSelectElement; 
-  const allAlertElements = [...document.querySelectorAll('.alertElement')] as HTMLParagraphElement[];  
+  const genderSelect = document.getElementById('genderSelect') as HTMLSelectElement;
+  const allAlertElements = [...document.querySelectorAll('.alertElement')] as HTMLParagraphElement[];
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -123,7 +127,7 @@ const handleForm = () => {
     const status = allInputs.map((input, i) => {
       return validateInput(input.value, allAlertElements[i])
     }).every(stat => stat);
-        
+
     if (status) {
       const result = signupUser(
         username,
@@ -133,9 +137,12 @@ const handleForm = () => {
         location,
         password,
         passwordReenter);
-      
+
       handleResultMessage(result);
-      if (result.status) setTimeout(showMainPage, 1000);
+      if (result.status) setTimeout(() => {
+        manageState();
+        showHomePage();
+      }, 1000);
     }
   });
 }
@@ -143,18 +150,21 @@ const handleForm = () => {
 const handleResultMessage = (result: {
   status: boolean;
   message: string;
-} ) => {
+}) => {
   const resultMessageElement = document.querySelector('.resultMessage') as HTMLParagraphElement;
   resultMessageElement.classList.remove('hidden');
-  if (result.status) resultMessageElement.style.color = 'var(--green800)'; 
+  if (result.status) resultMessageElement.style.color = 'var(--green800)';
   else resultMessageElement.style.color = 'var(--rose700)';
   resultMessageElement.textContent = result.message;
-} 
+}
 
 const handleAnchorClicks = () => {
 
   const showLoginAnchor = document.querySelector('[data-show-login]');
 
-  showLoginAnchor?.addEventListener('click', showLoginPage);
+  showLoginAnchor?.addEventListener('click', (event) => {
+    event.preventDefault();
+    showLoginPage();
+  });
 
 }

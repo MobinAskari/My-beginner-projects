@@ -1,12 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap');
 
 :root {
-  --slate950: #020617;
-  --slate900: #0f172a;
-  --gray200: #e5e7eb;
   --gray400: #9ca3af;
-  --neutral50: #fafafa;
-  --neutral50-lo: #fafafa2a;
   --blue700: #1d4ed8;
   --rose700: #be123c;
   --rose800: #9f1239;
@@ -18,13 +13,21 @@
   --sidebar-width: 12rem;
 }
 
-/* :root {
+.light-mode {
   --slate950: #e5e7eb;
   --slate900: #d4d4d4;
   --gray200: #1e293b;
   --neutral50: #020617;
   --neutral50-lo: #0206172a;
-} */
+}
+
+.dark-mode {
+  --slate950: #020617;
+  --slate900: #0f172a;
+  --gray200: #e5e7eb;
+  --neutral50: #fafafa;
+  --neutral50-lo: #fafafa2a;
+}
 
 html {
   width: 100%;
