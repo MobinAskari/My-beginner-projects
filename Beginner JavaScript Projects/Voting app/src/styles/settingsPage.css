@@ -1,0 +1,32 @@
+.add-section.horizontal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--neutral50);
+}
+
+.current-profile-picture-wrapper {
+  max-width: 3.25rem;
+  max-height: 3.25rem;
+  display: flex;
+  border: 1px solid var(--neutral50);
+}
+
+.current-profile-picture-wrapper,
+.current-profile-picture-wrapper img,
+.current-profile-picture-wrapper svg {
+  aspect-ratio: 1 / 1;
+  border-radius: .25rem;
+}
+
+.profile-picture-actions-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.profile-picture-actions-buttons {
+  display: flex;
+  gap: .75rem;
+}

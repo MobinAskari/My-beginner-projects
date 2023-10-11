@@ -1,0 +1,114 @@
+.header__user-menu {
+  width: 20rem;
+  height: fit-content;
+  position: absolute;
+  top: 130%;
+  right: 30%;
+  z-index: 12;
+  background-color: var(--slate950);
+  border: 1px solid var(--rose700);
+  padding: .5rem;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.header__user-menu.shown {
+  pointer-events: visible;
+  opacity: 1;
+}
+
+.header__user-menu::before {
+  content: "";
+  position: absolute;
+  top: -0.875rem;
+  right: -2px;
+  border: 7.5px solid;
+  border-color: transparent transparent var(--rose700) transparent;
+}
+
+.user-menu__profile {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--rose800);
+}
+
+.user-menu__profile .profile-pic-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  aspect-ratio: 1 / 1;
+}
+
+.user-menu__profile .profile-pic-wrapper img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border: 1px solid var(--rose700);
+  border-radius: 50%;
+}
+
+.profile-name-action {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+  color: var(--neutral50);
+  font-size: .8rem;
+}
+
+.profile-name-action a {
+  transition: color 0.2s;
+}
+
+.profile-name-action a:hover {
+  color: var(--rose800);
+}
+
+.user-menu__actions {
+  display: flex;
+  flex-direction: column;
+  margin-top: .25rem;
+  gap: .25rem;
+}
+
+.user-menu__action,
+.menu__action-icon,
+.menu__action-right-section {
+  display: flex;
+  align-items: center;
+}
+
+.menu__action-icon {
+  place-items: center;
+}
+
+.user-menu__action {
+  max-height: 2rem;
+  align-items: center;
+  padding: 0.5rem 0;
+  gap: .5rem;
+  cursor: pointer;
+  border-radius: .25rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.user-menu__action:hover {
+  background-color: var(--neutral50-lo);
+}
+
+.menu__action-name {
+  color: var(--neutral50);
+}
+
+.menu__action-right-section {
+  margin-left: auto;
+}
+
+@media screen and (max-width: 400px) {
+  .header__user-menu {
+    width: 15rem;
+  }
+}

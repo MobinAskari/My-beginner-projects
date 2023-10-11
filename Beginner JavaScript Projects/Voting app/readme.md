@@ -1,11 +1,4 @@
-npm i:
-"devDependencies": {
-  "@types/express": "^4.17.17",
-  "typescript": "^5.0.2",
-  "vite": "^4.4.5"
-},
-"dependencies": {
-  "@types/cors": "^2.8.14",
-  "cors": "^2.8.5",
-  "express": "^4.18.2"
-}
+npm i vite@latest (choose typescript)
+npm i pocketbase (is a SDK that's used throughout this project)
+
+Install/extract pocketbase executable in the backend folder and run it with: ./pocketbase serve

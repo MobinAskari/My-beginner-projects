@@ -1,0 +1,39 @@
+.polls-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 1rem;
+}
+
+.poll {
+  min-height: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  cursor: pointer;
+  padding: 1rem 1.25rem;
+  border-radius: 0.5rem;
+  background-color: var(--slate950);
+  color: var(--neutral50);
+}
+
+.poll-overviews {
+  display: flex;
+  gap: .75rem;
+}
+
+.poll-overview {
+  display: flex;
+  align-items: center;
+  color: var(--neutral50);
+}
+
+.poll-name {
+  color: var(--neutral50);
+}
+
+.poll-metadatas,
+.poll-metadata {
+  display: flex;
+  align-items: center;
+  color: var(--neutral50);
+}

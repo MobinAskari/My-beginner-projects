@@ -73,8 +73,12 @@
   color: var(--rose700);
 }
 
+.submit-btn-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 .form__submit-btn {
-  /* margin-top: auto; */
   padding: .5rem;
   border-radius: .25rem;
   color: var(--gray200);

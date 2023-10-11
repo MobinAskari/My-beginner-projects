@@ -9,10 +9,220 @@
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
 
-  <script defer type="module" src="/src/scripts/main.ts"></script>
+  <script defer type="module" src="/src/main.ts"></script>
 </head>
 
-<body>
+<body class="dark-mode">
+  <!--  
+  <header class="header">
+    <div class="header__logo">
+      <h2>Voting <span>App</span></h2>
+    </div>
+
+    <div class="header__search">
+      <div class="header__search-wrapper">
+        <button>
+          <svg width="1.5rem" height="1.5rem">
+            <use href="/icons.svg#icon_search">
+          </svg>
+        </button>
+        <input type="text" placeholder="Search polls...">
+      </div>
+    </div>
+
+    <div class="header__profile">
+      <div class="header__profile-picture">
+        <img src="/pfps/profile-2.jpg" alt="">
+        <svg width="1.75rem" height="1.75rem">
+          <use href="/icons.svg#icon_userNoPfp">
+        </svg>
+      </div>
+      <div class="header__user-menu">
+        <div class="user-menu__profile">
+          <div class="profile-pic-wrapper">
+            <img src="/pfps/profile-2.jpg" alt="">
+          </div>
+          <div class="profile-name-action">
+            <p>Lorem Ipsum</p>
+            <a href="#">See your profile</a>
+          </div>
+        </div>
+        <div class="user-menu__actions">
+          <div class="user-menu__action">
+            <div class="menu__action-icon">
+              <svg width="1.25rem" height="1.25rem">
+                <use href="/icons.svg#icon_settings"></use>
+              </svg>
+            </div>
+            <div class="menu__action-name">
+              <p>Settings</p>
+            </div>
+            <div class="menu__action-right-section"></div>
+          </div>
+          <div class="user-menu__action">
+            <div class="menu__action-icon">
+              <svg width="1.25rem" height="1.25rem">
+                <use href="/icons.svg#icon_theme"></use>
+              </svg>
+            </div>
+            <div class="menu__action-name">
+              <p>Toggle Theme</p>
+            </div>
+            <div class="menu__action-right-section">
+              <div class="theme-switcher-wrapper">
+                <div class="light-mode-theme active">
+                  <svg width="1.25rem" height="1.25rem">
+                    <use href="/icons.svg#icon_moon"></use>
+                  </svg>
+                </div>
+                <div class="dark-mode-theme ">
+                  <svg width="1.25rem" height="1.25rem">
+                    <use href="/icons.svg#icon_sun"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="user-menu__action">
+            <div class="menu__action-icon">
+              <svg width="1.25rem" height="1.25rem">
+                <use href="/icons.svg#icon_logout"></use>
+              </svg>
+            </div>
+            <div class="menu__action-name">
+              <p>Logout</p>
+            </div>
+            <div class="menu__action-right-section"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <aside class="sidebar">
+    <nav>
+      <ul>
+        <li>
+          <svg width="1.75rem" height="1.75rem">
+            <use href="/icons.svg#icon_home">
+          </svg>
+          <p>Home</p>
+        </li>
+        <li>
+          <svg width="1.75rem" height="1.75rem">
+            <use href="/icons.svg#icon_categories">
+          </svg>
+          <p>Categories</p>
+        </li>
+        <li>
+          <button class="sidebar-add-btn">
+            <svg width="1.5rem" height="1.5rem">
+              <use href="/icons.svg#icon_add">
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+  <main class="container hasHeader hasSidebar">
+    <div class="head-ux-actions-container">
+      <button class="back-btn">
+        <span class="material-symbols-rounded">arrow_back</span>
+      </button>
+    </div>
+    <div class="add-section horizontal">
+      <div class="current-profile-picture-wrapper">
+        <img src="/pfps/profile-2.jpg" alt="">
+        <svg>
+          <use href="/icons.svg#icon_userNoPfp">
+        </svg>
+      </div>
+      <div class="profile-picture-actions-container">
+        <div class="profile-picture-actions-buttons">
+          <button class="def-btn blue">Upload a new photo</button>
+          <button class="hollow-btn red">Remove</button>
+        </div>
+        <div class="profile-picture-actions-description">
+          <p>Supports all image formats with a max size of 3MB</p>
+        </div>
+      </div>
+    </div>
+    <div class="add-section">
+      <div class="polls-container">
+        <div class="loading-object-container">
+          <div class="loading-object">
+
+          </div>
+        </div>
+      </div>
+    </div>
+      
+    <div class="add-sections-container">
+      <div class="add-section">
+        <label for="pollName" class="add-section-input-label">
+          <svg width="1.5rem" height="1.5rem">
+            <use href="/icons.svg#icon_title"></use>
+          </svg>
+          <p>Write a title for your poll</p>
+        </label>
+        <input type="text" id="pollName" class="js-poll-title-input" placeholder="Poll title">
+      </div>
+      <div class="add-section">
+        <label for="first-category-slot-element" class="add-section-input-label">
+          <svg width="1.5rem" height="1.5rem">
+            <use href="/icons.svg#icon_categories"></use>
+          </svg>
+          <p>Write at least one category</p>
+        </label>
+        <div class="add-slots-container">
+          <div class="slot-element">
+            <input type="text" id="first-category-slot-element" class="js-poll-category-input">
+          </div>
+          <button class="add-slot-element-btn" data-className-for-slot="js-poll-category-input">
+            <svg width="1.5rem" height="1.5rem">
+              <use href="/icons.svg#icon_add"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="add-section">
+        <label for="first-add-option-element" class="add-section-input-label">
+          <svg width="1.5rem" height="1.5rem">
+            <use href="/icons.svg#icon_options"></use>
+          </svg>
+          <p>Write at least two choices</p>
+        </label>
+        <div class="add-slots-container">
+          <div class="slot-element">
+            <input type="text" id="first-add-option-element" class="js-poll-choice-input">
+          </div>
+          <div class="slot-element">
+            <input type="text" class="js-poll-choice-input">
+          </div>
+          <button class="add-slot-element-btn" data-className-for-slot="js-poll-choice-input">
+            <svg width="1.5rem" height="1.5rem">
+              <use href="/icons.svg#icon_add"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="add-section">
+        <label for="always-open-checkbox" class="add-section-input-label">
+          <svg width="1.5rem" height="1.5rem">
+            <use href="/icons.svg#icon_calendar"></use>
+          </svg>
+          <p>Select always open or set a closing date for the poll</p>
+        </label>
+        <div class="add-slots-container">
+          <input type="checkbox" id="always-open-checkbox" class="always-open-checkbox" checked="true">
+          <label for="always-open-checkbox" class="always-open-checkbox-label"></label>
+          <label for="always-open-checkbox" class="text-label">Always open</label>
+        </div>
+        <input type="datetime-local" class="poll-close-date-input">
+      </div>
+    </div>
+    
+  </main>
+-->
   <!--  
   <header class="header">
     <div class="header__logo">
