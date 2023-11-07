@@ -1,0 +1,45 @@
+.polls-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 1rem;
+}
+
+.poll {
+  min-height: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  cursor: pointer;
+  padding: 1rem 1.25rem;
+  border-radius: 0.5rem;
+  background-color: var(--semi-black);
+  color: var(--neutral50);
+}
+
+.poll-overviews {
+  display: flex;
+  gap: .75rem;
+}
+
+.poll-overview {
+  display: flex;
+  align-items: center;
+  color: var(--neutral50);
+}
+
+.poll-name {
+  line-height: 1.25;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -moz-box-orient: vertical;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  color: var(--neutral50);
+  transition: color 0.2s ease-in-out;
+}
+
+.poll-name:hover {
+  color: var(--rose800);
+}

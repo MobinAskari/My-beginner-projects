@@ -1,0 +1,85 @@
+.horiz-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.link-rose {
+  color: var(--rose700);
+  text-decoration: underline;
+}
+
+.hidden {
+  display: none;
+}
+
+.head-ux-actions-container {
+  display: flex;
+  align-items: center;
+  padding-top: .25rem;
+  gap: .25rem;
+}
+
+.onboarding__btn {
+  background-color: var(--neutral50);
+  padding: .5rem;
+  border-radius: .25rem;
+  color: var(--black);
+  box-shadow: 0 0 12px 2px var(--rose700);
+  transition: box-shadow 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.onboarding__btn:hover {
+  background-color: var(--black);
+  color: #fafafa;
+  box-shadow: 0 0 8px 1px var(--rose800);
+}
+
+.def-btn {
+  display: flex;
+  align-items: center;
+  padding: .25rem 0.5rem;
+  border-radius: .25rem;
+  transition: filter 0.2s ease-in-out;
+  border: 1px solid transparent;
+  color: #fafafa;
+}
+
+.hollow-btn {
+  display: flex;
+  align-items: center;
+  padding: .25rem 0.5rem;
+  border-radius: .25rem;
+  border: 1px solid;
+  background-color: transparent;
+}
+
+.def-btn:hover,
+.hollow-btn:hover {
+  filter: grayscale(25%);
+}
+
+.def-btn.blue {
+  background-color: var(--blue700);
+}
+
+.def-btn.red {
+  background-color: var(--rose700);
+}
+
+.hollow-btn.red {
+  border-color: var(--rose700);
+}
+
+.editBtn {
+  display: flex;
+}
+
+.editBtn svg {
+  transition: color 0.2s ease-in-out;
+}
+
+.editBtn svg:hover {
+  color: var(--rose700);
+}

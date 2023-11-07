@@ -1,0 +1,39 @@
+.light-mode {
+  --black: rgb(240, 240, 255);
+  --semi-black: rgb(210, 210, 230);
+  --gray200: #1e293b;
+  --neutral50: #020617;
+  --neutral50-lo: #0206172a;
+}
+
+.dark-mode {
+  --black: rgb(0, 0, 0);
+  --semi-black: rgb(31, 31, 35);
+  --gray200: #e5e7eb;
+  --neutral50: #fafafa;
+  --neutral50-lo: #fafafa2a;
+}
+
+.theme-switcher-wrapper {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  border-radius: .5rem;
+  background-color: var(--gray400);
+}
+
+.app-theme-icon-wrapper {
+  display: flex;
+  align-items: center;
+  border-radius: .5rem;
+  padding: .15rem;
+  transition: background-color 0.2s;
+}
+
+.app-theme-icon-wrapper svg {
+  color: var(--black);
+}
+
+.app-theme-icon-wrapper.active {
+  background-color: var(--rose700);
+}
